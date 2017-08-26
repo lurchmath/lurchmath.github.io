@@ -1,0 +1,14 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to Lurch Math\n\n\nThis is just a temporary placeholder for the site documentation.  There is nothing here yet.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#welcome-to-lurch-math", 
+            "text": "This is just a temporary placeholder for the site documentation.  There is nothing here yet.", 
+            "title": "Welcome to Lurch Math"
+        }
+    ]
+}
