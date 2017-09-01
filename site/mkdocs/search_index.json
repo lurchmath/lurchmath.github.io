@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to Lurch Math\n\n\nThis is just a temporary placeholder for the site documentation.  There is nothing here yet.\n\n\nFor now you can \nview our repository \n.", 
+            "text": "Welcome to Lurch Math\n\n\nThe Lurch Math Project brings together several different software components to create a web based word processor that is capable of checking reasoning, especially for mathematical proofs.  Currently Lurch Math is comprised of the following subprojects.\n\n\n\n\nlurch\n - The Lurch app itself. Lurch is a mathematical word processor that checks the reasoning in users' documents, even mathematical proofs.\n\n\nopenmath-js\n - An implementation of (most of) the \nOpenMath Standard\n in JavaScript.\n\n\nearley-parser\n - A JavaScript implementation of the \nEarley parsing algorithm\n.\n\n\nfirst-order-matching\n - A limited JavaScript implementation of a matching algorithm for expressions of first-order logic.\n\n\n\n\nMore documentation will be added here in the future. For now you can \nview this repository \n.", 
             "title": "Home"
         }, 
         {
             "location": "/#welcome-to-lurch-math", 
-            "text": "This is just a temporary placeholder for the site documentation.  There is nothing here yet.  For now you can  view our repository  .", 
+            "text": "The Lurch Math Project brings together several different software components to create a web based word processor that is capable of checking reasoning, especially for mathematical proofs.  Currently Lurch Math is comprised of the following subprojects.   lurch  - The Lurch app itself. Lurch is a mathematical word processor that checks the reasoning in users' documents, even mathematical proofs.  openmath-js  - An implementation of (most of) the  OpenMath Standard  in JavaScript.  earley-parser  - A JavaScript implementation of the  Earley parsing algorithm .  first-order-matching  - A limited JavaScript implementation of a matching algorithm for expressions of first-order logic.   More documentation will be added here in the future. For now you can  view this repository  .", 
             "title": "Welcome to Lurch Math"
         }
     ]
