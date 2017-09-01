@@ -9,11 +9,6 @@
             "location": "/#welcome-to-lurch-math", 
             "text": "This is just a temporary placeholder for the site documentation.  There is nothing here yet.", 
             "title": "Welcome to Lurch Math"
-        }, 
-        {
-            "location": "/README/", 
-            "text": "An overview of the documentation for this site can be found \nhere\n.", 
-            "title": "README"
         }
     ]
 }
