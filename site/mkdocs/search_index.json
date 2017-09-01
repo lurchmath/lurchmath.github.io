@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to Lurch Math\n\n\nThis is just a temporary placeholder for the site documentation.  There is nothing here yet.\n\n\nFor now you can \nview our repository\n.", 
+            "text": "Welcome to Lurch Math\n\n\nThis is just a temporary placeholder for the site documentation.  There is nothing here yet.\n\n\nFor now you can \nview our repository \n.", 
             "title": "Home"
         }, 
         {
             "location": "/#welcome-to-lurch-math", 
-            "text": "This is just a temporary placeholder for the site documentation.  There is nothing here yet.  For now you can  view our repository .", 
+            "text": "This is just a temporary placeholder for the site documentation.  There is nothing here yet.  For now you can  view our repository  .", 
             "title": "Welcome to Lurch Math"
         }
     ]
