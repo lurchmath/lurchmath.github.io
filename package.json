@@ -8,8 +8,8 @@
   "dependencies": {},
   "devDependencies": {
     "coffeescript": "^2.0.3",
-    "gulp": "^3.9.1",
-    "gulp-shell": "^0.6.3"
+    "gulp": "^4.0.0",
+    "gulp-shell": "^0.6.5"
   },
   "repository": {
     "type": "git",
