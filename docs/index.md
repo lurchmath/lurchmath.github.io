@@ -18,6 +18,9 @@ but right now there is very little documentation, and new bug fixes and feature
 additions happen literally every day.  Expect a more stable release in late
 spring of 2024.
 
+Potential new contributors can check out
+[the new app's GitHub repository here](http://www.github.com/lurchmath/lurchmath).
+
 ## Other tools
 
  * [The Lurch Deductive Engine (LDE)](http://github.com/lurchmath/lde) is the
