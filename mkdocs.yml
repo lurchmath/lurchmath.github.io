@@ -9,7 +9,8 @@ site_author: Nathan Carter and Ken Monks
 
 nav:
   - 'Home': index.md
-  - 'Web app': https://lurchmath.github.io/lurchmath/
+  - 'About': about.md
+  - 'Use Lurch now': https://lurchmath.github.io/lurchmath/
 
 theme:
   name: simplex
