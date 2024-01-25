@@ -1,1 +1,25 @@
+
 site_name: The Lurch Project
+
+site_url: https://lurchmath.github.io/
+repo_url: https://github.com/lurchmath/lurchmath.github.io
+
+site_description: Documentation for the Lurch proof checker
+site_author: Nathan Carter and Ken Monks
+
+nav:
+  - 'Home': index.md
+  - 'Web app': https://lurchmath.github.io/lurchmath/
+
+theme:
+  name: simplex
+  locale: en
+
+markdown_extensions:
+  - extra
+  - admonition
+  - codehilite
+  - mdx_math
+
+extra_javascript: 
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js

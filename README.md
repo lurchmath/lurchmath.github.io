@@ -1,1 +1,4 @@
-An overview of the documentation for this site can be found [here](https://lurchmath.github.io).
+
+# Documentation for the Lurch project
+
+View it online [here](https://lurchmath.github.io).
