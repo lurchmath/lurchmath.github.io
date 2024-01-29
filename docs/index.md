@@ -13,10 +13,14 @@ manually graded feedback.
 ## Current status
 
 The latest version of Lurch is a web application that is in alpha testing at the
-moment.  [You can try it online here,](http://lurchmath.github.io/lurchmath)
-but right now there is very little documentation, and new bug fixes and feature
-additions happen literally every day.  Expect a more stable release in late
-spring of 2024.
+moment.  [You can try it online here!](http://lurchmath.github.io/lurchmath)
+
+## Documentation
+
+We are *just beginning* to write documentation, but you can
+[find it online here](documentation.md).
+New bug fixes, new features, and new documentation arrive almost every day.
+Expect a more stable release in late spring of 2024.
 
 Potential new contributors can check out
 [the new app's GitHub repository here](http://www.github.com/lurchmath/lurchmath).
