@@ -21,7 +21,9 @@ assumption on the previous line, the green check indicates that it is correct.
 The assumption does not get a check mark, since it was not a step of reasoning,
 but just an assumption.
 
-<div class='lurch-embed' format='markdown' width='100%' height='400px' validate='true'>
+<div class='lurch-embed' format='markdown' width='100%' height='400px'
+     appURL='https://lurchmath.github.io/lurchmath/index.html'
+     validate='true'>
 What if we `assume P`?
 
 The simplest conclusion we can draw from that is just `P` itself.

@@ -10,6 +10,7 @@ site_author: Nathan Carter and Ken Monks
 nav:
   - 'Home': index.md
   - 'About': about.md
+  - 'Documentation': documentation.md
   - 'Use Lurch now': https://lurchmath.github.io/lurchmath/
 
 theme:
