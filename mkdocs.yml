@@ -8,10 +8,10 @@ site_description: Documentation for the Lurch proof checker
 site_author: Nathan Carter and Ken Monks
 
 nav:
-  - 'Home': index.md
-  - 'About': about.md
-  - 'Documentation': documentation.md
-  - 'Use Lurch now': https://lurchmath.github.io/lurchmath/
+  - Home: index.md
+  - About: about.md
+  - Tutorial: tutorial-toc.md
+  - Use Lurch now: https://lurchmath.github.io/lurchmath/
 
 theme:
   name: simplex
@@ -26,3 +26,7 @@ markdown_extensions:
 extra_javascript: 
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
     - https://cdn.jsdelivr.net/gh/lurchmath/lurchmath@master/embedded.js
+
+validation:
+  nav:
+    omitted_files: ignore # Some files are left out of nav and that's okay

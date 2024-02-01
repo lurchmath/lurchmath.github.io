@@ -17,10 +17,12 @@ moment.  [You can try it online here!](http://lurchmath.github.io/lurchmath)
 
 ## Documentation
 
-We are *just beginning* to write documentation, but you can
-[find it online here](documentation.md).
-New bug fixes, new features, and new documentation arrive almost every day.
-Expect a more stable release in late spring of 2024.
+!!! warning ""
+
+    We are *just beginning* to write documentation, but you can
+    [find a tutorial online here](tutorial-toc.md).
+    New bug fixes, new features, and new documentation arrive almost every day.
+    Expect a more stable release in late spring of 2024.
 
 Potential new contributors can check out
 [the new app's GitHub repository here](http://www.github.com/lurchmath/lurchmath).
