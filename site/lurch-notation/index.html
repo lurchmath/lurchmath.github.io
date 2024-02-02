@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Nathan Carter and Ken Monks">
+        <link rel="canonical" href="https://lurchmath.github.io/lurch-notation/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Lurch notation reference - The Lurch Project</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-cave-light.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">The Lurch Project</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../tutorial-toc/" class="nav-link">Tutorial</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="https://lurchmath.github.io/lurchmath/" class="nav-link">Use Lurch now</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/lurchmath/lurchmath.github.io/edit/master/docs/lurch-notation.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#lurch-notation-reference" class="nav-link">Lurch notation reference</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#logic" class="nav-link">Logic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#quantifiers-and-bindings" class="nav-link">Quantifiers and bindings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#algebraic-expressions" class="nav-link">Algebraic expressions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#set-theory" class="nav-link">Set Theory</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#relations" class="nav-link">Relations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#assumptions-and-declarations-case-insensitive" class="nav-link">Assumptions and Declarations (case insensitive)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#miscellaneous" class="nav-link">Miscellaneous</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="lurch-notation-reference">Lurch notation reference</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning: The notation below is not intended for everyone</p>
+<p>Our eventual plan for Lurch is that every instructor can choose the syntax
+and notation that makes the most sense for their students.  (Furthermore,
+instructors who want students to use an equation editor only can already do
+that.)  Consequently, the notation documented below is <strong>NOT</strong> the
+permanent notation that our application will always use.  In fact, right
+now, it's customized particularly to the needs of the one and only
+instructor testing Lurch in an actual course!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning: The notation below will probably change often</p>
+<p>While it was inspired by <a href="https://asciimath.org/">AsciiMath</a>, and we will
+try to stay consistent with that standard when possible, some of the unique
+notation below may change over time, in response to in-class testing, new
+needs, and feedback from students and potential new adopters.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning: The notation below is not fully documented</p>
+<p>Not every symbol or expression below has a self-evident meaning.  Our
+documentation for this project has just begun, and we aim to make it more
+comprehensive with time.</p>
+</div>
+<p>The reader will also note that many meanings have more than one way to type
+them.  Especially when a Lurch notation expression uses unicode characters,
+there is typically a plain-text alternative, to make it easier to type.</p>
+<h2 id="logic">Logic</h2>
+<table>
+<thead>
+<tr>
+<th>Lurch notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>P and Q</code></td>
+<td><span class="arithmatex">\(P\text{ and }Q\)</span></td>
+</tr>
+<tr>
+<td><code>P∧Q</code></td>
+<td><span class="arithmatex">\(P\text{ and }Q\)</span></td>
+</tr>
+<tr>
+<td><code>P or Q</code></td>
+<td><span class="arithmatex">\(P\text{ or }Q\)</span></td>
+</tr>
+<tr>
+<td><code>P∨Q</code></td>
+<td><span class="arithmatex">\(P\text{ or }Q\)</span></td>
+</tr>
+<tr>
+<td><code>not P</code></td>
+<td><span class="arithmatex">\(\neg P\)</span></td>
+</tr>
+<tr>
+<td><code>¬P</code></td>
+<td><span class="arithmatex">\(\neg P\)</span></td>
+</tr>
+<tr>
+<td><code>P implies Q</code></td>
+<td><span class="arithmatex">\(P\Rightarrow Q\)</span></td>
+</tr>
+<tr>
+<td><code>P⇒Q</code></td>
+<td><span class="arithmatex">\(P\Rightarrow Q\)</span></td>
+</tr>
+<tr>
+<td><code>P iff Q</code></td>
+<td><span class="arithmatex">\(P\Leftrightarrow Q\)</span></td>
+</tr>
+<tr>
+<td><code>P⇔Q</code></td>
+<td><span class="arithmatex">\(P\Leftrightarrow Q\)</span></td>
+</tr>
+<tr>
+<td><code>contradiction</code></td>
+<td><span class="arithmatex">\(\rightarrow\leftarrow\)</span></td>
+</tr>
+<tr>
+<td><code>→←</code></td>
+<td><span class="arithmatex">\(\rightarrow\leftarrow\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="quantifiers-and-bindings">Quantifiers and bindings</h2>
+<table>
+<thead>
+<tr>
+<th>Lurch notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>forall x.x&lt;x+1</code></td>
+<td><span class="arithmatex">\(\forall x, x&lt;x+1\)</span></td>
+</tr>
+<tr>
+<td><code>for all x.x&lt;x+1</code></td>
+<td><span class="arithmatex">\(\forall x, x&lt;x+1\)</span></td>
+</tr>
+<tr>
+<td><code>∀x.x&lt;x+1</code></td>
+<td><span class="arithmatex">\(\forall x, x&lt;x+1\)</span></td>
+</tr>
+<tr>
+<td><code>exists x.x=2 cdot x</code></td>
+<td><span class="arithmatex">\(\exists x, x=2x\)</span></td>
+</tr>
+<tr>
+<td><code>∃x.x=2⋅x</code></td>
+<td><span class="arithmatex">\(\exists x, x=2x\)</span></td>
+</tr>
+<tr>
+<td><code>exists unique x.x=2 cdot x</code></td>
+<td><span class="arithmatex">\(\exists ! x, x=2x\)</span></td>
+</tr>
+<tr>
+<td><code>∃!x.x=2⋅x</code></td>
+<td><span class="arithmatex">\(\exists ! x, x=2x\)</span></td>
+</tr>
+<tr>
+<td><code>x.x+2</code></td>
+<td><span class="arithmatex">\(x, x+1\)</span></td>
+</tr>
+<tr>
+<td><code>x↦x+2</code></td>
+<td><span class="arithmatex">\(x, x+1\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="algebraic-expressions">Algebraic expressions</h2>
+<table>
+<thead>
+<tr>
+<th>Lurch notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(x)</code></td>
+<td><span class="arithmatex">\(\left(x\right)\)</span></td>
+</tr>
+<tr>
+<td><code>x+y</code></td>
+<td><span class="arithmatex">\(x+y\)</span></td>
+</tr>
+<tr>
+<td><code>2+x+y</code></td>
+<td><span class="arithmatex">\(2+x+y\)</span></td>
+</tr>
+<tr>
+<td><code>-x</code></td>
+<td><span class="arithmatex">\(-x\)</span></td>
+</tr>
+<tr>
+<td><code>1-x</code></td>
+<td><span class="arithmatex">\(1-x\)</span></td>
+</tr>
+<tr>
+<td><code>x*y</code></td>
+<td><span class="arithmatex">\(x y\)</span></td>
+</tr>
+<tr>
+<td><code>x cdot y</code></td>
+<td><span class="arithmatex">\(x y\)</span></td>
+</tr>
+<tr>
+<td><code>x⋅y</code></td>
+<td><span class="arithmatex">\(x y\)</span></td>
+</tr>
+<tr>
+<td><code>2*x*y</code></td>
+<td><span class="arithmatex">\(2 x y\)</span></td>
+</tr>
+<tr>
+<td><code>2 cdot x cdot y</code></td>
+<td><span class="arithmatex">\(2 x y\)</span></td>
+</tr>
+<tr>
+<td><code>2⋅x⋅y</code></td>
+<td><span class="arithmatex">\(2 x y\)</span></td>
+</tr>
+<tr>
+<td><code>2*3*x</code></td>
+<td><span class="arithmatex">\(2\cdot 3 x\)</span></td>
+</tr>
+<tr>
+<td><code>2 cdot 3 cdot x</code></td>
+<td><span class="arithmatex">\(2\cdot 3 x\)</span></td>
+</tr>
+<tr>
+<td><code>2⋅3⋅x</code></td>
+<td><span class="arithmatex">\(2\cdot 3 x\)</span></td>
+</tr>
+<tr>
+<td><code>1/x</code></td>
+<td><span class="arithmatex">\(\frac{1}{x}\)</span></td>
+</tr>
+<tr>
+<td><code>2*1/x*y</code></td>
+<td><span class="arithmatex">\(2\frac{1}{x}y\)</span></td>
+</tr>
+<tr>
+<td><code>(2*1)/(x*y)</code></td>
+<td><span class="arithmatex">\(\frac{(2\cdot 1)}{(xy)}\)</span></td>
+</tr>
+<tr>
+<td><code>x^2</code></td>
+<td><span class="arithmatex">\(x^2\)</span></td>
+</tr>
+<tr>
+<td><code>x factorial</code></td>
+<td><span class="arithmatex">\(x!\)</span></td>
+</tr>
+<tr>
+<td><code>x！</code></td>
+<td><span class="arithmatex">\(x!\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="set-theory">Set Theory</h2>
+<table>
+<thead>
+<tr>
+<th>Lurch notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x in A</code></td>
+<td><span class="arithmatex">\(x\in A\)</span></td>
+</tr>
+<tr>
+<td><code>x∈A</code></td>
+<td><span class="arithmatex">\(x\in A\)</span></td>
+</tr>
+<tr>
+<td><code>x notin A</code></td>
+<td><span class="arithmatex">\(x\notin A\)</span></td>
+</tr>
+<tr>
+<td><code>x∉A</code></td>
+<td><span class="arithmatex">\(x\notin A\)</span></td>
+</tr>
+<tr>
+<td><code>A subset B</code></td>
+<td><span class="arithmatex">\(A\subseteq B\)</span></td>
+</tr>
+<tr>
+<td><code>A subseteq B</code></td>
+<td><span class="arithmatex">\(A\subseteq B\)</span></td>
+</tr>
+<tr>
+<td><code>A⊆B</code></td>
+<td><span class="arithmatex">\(A\subseteq B\)</span></td>
+</tr>
+<tr>
+<td><code>A cup B</code></td>
+<td><span class="arithmatex">\(A\cup B\)</span></td>
+</tr>
+<tr>
+<td><code>A union B</code></td>
+<td><span class="arithmatex">\(A\cup B\)</span></td>
+</tr>
+<tr>
+<td><code>A∪B</code></td>
+<td><span class="arithmatex">\(A\cup B\)</span></td>
+</tr>
+<tr>
+<td><code>A cap B</code></td>
+<td><span class="arithmatex">\(A\cap B\)</span></td>
+</tr>
+<tr>
+<td><code>A intersect B</code></td>
+<td><span class="arithmatex">\(A\cap B\)</span></td>
+</tr>
+<tr>
+<td><code>A∩B</code></td>
+<td><span class="arithmatex">\(A\cap B\)</span></td>
+</tr>
+<tr>
+<td><code>A setminus B</code></td>
+<td><span class="arithmatex">\(A\setminus B\)</span></td>
+</tr>
+<tr>
+<td><code>A∖B</code></td>
+<td><span class="arithmatex">\(A\setminus B\)</span></td>
+</tr>
+<tr>
+<td><code>A complement</code></td>
+<td><span class="arithmatex">\(A^\circ\)</span></td>
+</tr>
+<tr>
+<td><code>A°</code></td>
+<td><span class="arithmatex">\(A^\circ\)</span></td>
+</tr>
+<tr>
+<td><code>f:A→B</code></td>
+<td><span class="arithmatex">\(f\colon A\to B\)</span></td>
+</tr>
+<tr>
+<td><code>f(x)</code></td>
+<td><span class="arithmatex">\(f\left(x\right)\)</span></td>
+</tr>
+<tr>
+<td><code>g circ f</code></td>
+<td><span class="arithmatex">\(g\circ f\)</span></td>
+</tr>
+<tr>
+<td><code>g∘f</code></td>
+<td><span class="arithmatex">\(g\circ f\)</span></td>
+</tr>
+<tr>
+<td><code>A times B</code></td>
+<td><span class="arithmatex">\(A\times B\)</span></td>
+</tr>
+<tr>
+<td><code>A×B</code></td>
+<td><span class="arithmatex">\(A\times B\)</span></td>
+</tr>
+<tr>
+<td><code>⟨x,y⟩</code></td>
+<td><span class="arithmatex">\(\langle x,y \rangle\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="relations">Relations</h2>
+<table>
+<thead>
+<tr>
+<th>Lurch notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x &lt; 0</code></td>
+<td><span class="arithmatex">\(x&lt;0\)</span></td>
+</tr>
+<tr>
+<td><code>x lt 0</code></td>
+<td><span class="arithmatex">\(x&lt;0\)</span></td>
+</tr>
+<tr>
+<td><code>x leq 0</code></td>
+<td><span class="arithmatex">\(x\leq 0\)</span></td>
+</tr>
+<tr>
+<td><code>x ≤ 0</code></td>
+<td><span class="arithmatex">\(x\leq 0\)</span></td>
+</tr>
+<tr>
+<td><code>x neq 0</code></td>
+<td><span class="arithmatex">\(x\neq 0\)</span></td>
+</tr>
+<tr>
+<td><code>x ne 0</code></td>
+<td><span class="arithmatex">\(x\neq 0\)</span></td>
+</tr>
+<tr>
+<td><code>x≠0</code></td>
+<td><span class="arithmatex">\(x\neq 0\)</span></td>
+</tr>
+<tr>
+<td><code>m | n</code></td>
+<td><span class="arithmatex">\(m\mid n\)</span></td>
+</tr>
+<tr>
+<td><code>m divides n</code></td>
+<td><span class="arithmatex">\(m\mid n\)</span></td>
+</tr>
+<tr>
+<td><code>a≈b mod m</code></td>
+<td><span class="arithmatex">\(a\underset{m}{\equiv}b\)</span></td>
+</tr>
+<tr>
+<td><code>x~y</code></td>
+<td><span class="arithmatex">\(x\sim y\)</span></td>
+</tr>
+<tr>
+<td><code>x~y~z</code></td>
+<td><span class="arithmatex">\(x\sim y\sim z\)</span></td>
+</tr>
+<tr>
+<td><code>x=y</code></td>
+<td><span class="arithmatex">\(x=y\)</span></td>
+</tr>
+<tr>
+<td><code>x=y=z</code></td>
+<td><span class="arithmatex">\(x=y=z\)</span></td>
+</tr>
+<tr>
+<td><code>X loves Y</code></td>
+<td><span class="arithmatex">\(X\text{ loves }Y\)</span></td>
+</tr>
+<tr>
+<td><code>X is Y</code></td>
+<td><span class="arithmatex">\(X\text{ is }Y\)</span></td>
+</tr>
+<tr>
+<td><code>X is an Y</code></td>
+<td><span class="arithmatex">\(X\text{ is }Y\)</span></td>
+</tr>
+<tr>
+<td><code>X is a Y</code></td>
+<td><span class="arithmatex">\(X\text{ is }Y\)</span></td>
+</tr>
+<tr>
+<td><code>P is a partition of A</code></td>
+<td><span class="arithmatex">\(P\text{ is a partition of }A\)</span></td>
+</tr>
+<tr>
+<td><code>'~' is an equivalence relation</code></td>
+<td><span class="arithmatex">\(\sim\text{ is equivalence relation}\)</span></td>
+</tr>
+<tr>
+<td><code>[a]</code></td>
+<td><span class="arithmatex">\(\left[a\right]\)</span></td>
+</tr>
+<tr>
+<td><code>[a,~]</code></td>
+<td><span class="arithmatex">\(\left[a\right]_{\sim}\)</span></td>
+</tr>
+<tr>
+<td><code>'~' is a strict partial order</code></td>
+<td><span class="arithmatex">\(\sim\text{ is strict partial order}\)</span></td>
+</tr>
+<tr>
+<td><code>'~' is a partial order</code></td>
+<td><span class="arithmatex">\(\sim\text{ is partial order}\)</span></td>
+</tr>
+<tr>
+<td><code>'~' is a total order</code></td>
+<td><span class="arithmatex">\(\sim\text{ is total order}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="assumptions-and-declarations-case-insensitive">Assumptions and Declarations (case insensitive)</h2>
+<table>
+<thead>
+<tr>
+<th>Lurch notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Assume P</code></td>
+<td><span class="arithmatex">\(\text{Assume }P\)</span></td>
+</tr>
+<tr>
+<td><code>Given P</code></td>
+<td><span class="arithmatex">\(\text{Assume }P\)</span></td>
+</tr>
+<tr>
+<td><code>Suppose P</code></td>
+<td><span class="arithmatex">\(\text{Assume }P\)</span></td>
+</tr>
+<tr>
+<td><code>If P</code></td>
+<td><span class="arithmatex">\(\text{Assume }P\)</span></td>
+</tr>
+<tr>
+<td><code>:P</code></td>
+<td><span class="arithmatex">\(\text{Assume }P\)</span></td>
+</tr>
+<tr>
+<td><code>Let x</code></td>
+<td><span class="arithmatex">\(\text{Let }x\)</span></td>
+</tr>
+<tr>
+<td><code>Let x be such that x in ℝ</code></td>
+<td><span class="arithmatex">\(\text{Let }x\text{ be such that }x\in\mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td><code>Let x such that x in ℝ</code></td>
+<td><span class="arithmatex">\(\text{Let }x\text{ be such that }x\in\mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td><code>f(c)=0 for some c</code></td>
+<td><span class="arithmatex">\(f(c)=0\text{ for some }c\)</span></td>
+</tr>
+<tr>
+<td><code>Declare is 0 + cos</code></td>
+<td><span class="arithmatex">\(\text{Declare is, 0, +, and cos}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<table>
+<thead>
+<tr>
+<th>Lurch notation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f⁻(x)</code></td>
+<td><span class="arithmatex">\(f^-\left(x\right)\)</span></td>
+</tr>
+<tr>
+<td><code>f recip(x)</code></td>
+<td><span class="arithmatex">\(f^-\left(x\right)\)</span></td>
+</tr>
+<tr>
+<td><code>f inv(x)</code></td>
+<td><span class="arithmatex">\(f^-\left(x\right)\)</span></td>
+</tr>
+<tr>
+<td><code>x recip</code></td>
+<td><span class="arithmatex">\(x^-\)</span></td>
+</tr>
+<tr>
+<td><code>x inv</code></td>
+<td><span class="arithmatex">\(x^-\)</span></td>
+</tr>
+<tr>
+<td><code>x⁻</code></td>
+<td><span class="arithmatex">\(x^-\)</span></td>
+</tr>
+<tr>
+<td><code>λP(k)</code></td>
+<td><span class="arithmatex">\(\lambda{P}(k)\)</span></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/lurchmath/lurchmath@master/embedded.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

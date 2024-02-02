@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lurchmath.github.io/lurch-notation/</loc>
+         <lastmod>2024-02-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lurchmath.github.io/old-versions/</loc>
          <lastmod>2024-02-02</lastmod>
          <changefreq>daily</changefreq>

@@ -58,10 +58,8 @@ you can select which type of expression editor to use, from these options:
  - Beginner: the default you used above, a standard equation editor widget
    (thanks to the open-source tool [MathLive](https://cortexjs.io/mathlive/))
  - Intermediate: incorporates both the equation editor for those who wish to use
-   it and a text box that uses a special *Lurch notation.*  (Documentation for
-   that notation is forthcoming!  Until we've added it, just know that there is
-   a significant overlap between Lurch notation and
-   [AsciiMath](https://asciimath.org/).)
+   it and a text box that uses a special *Lurch notation.*  That notation is
+   [partially documented here](lurch-notation.md).
  - Advanced: for those who have mastered Lurch notation, a minimalist dialog
    that lets you stay in the flow of your document
 
