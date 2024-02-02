@@ -17,7 +17,7 @@ moment.  [You can try it online here!](http://lurchmath.github.io/lurchmath)
 
 ## Documentation
 
-!!! warning ""
+!!! warning
 
     We are *just beginning* to write documentation, but you can
     [find a tutorial online here](tutorial-toc.md).
