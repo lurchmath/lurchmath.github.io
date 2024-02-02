@@ -21,9 +21,9 @@ Here is the table of contents for the tutorial.  It is a work in progress.
 
 ### Basics
 
- - [Lurch as a word processor](tut-01-word-processor.md) (not yet written---coming soon!)
- - [Adding some mathematics](tut-02-expository-math.md) (not yet written---coming soon!)
- - [Making mathematics meaningful](tut-03-meaningful-math.md) (not yet written---coming soon!)
+ - [Lurch as a word processor](tut-01-word-processor.md)
+ - [Adding some mathematics](tut-02-expository-math.md)
+ - [Making mathematics meaningful](tut-03-meaningful-math.md)
  - [Checking your reasoning](tut-04-validation.md) (not yet written---coming soon!)
 
 ### Reading and using rules
