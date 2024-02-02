@@ -14,7 +14,7 @@ nav:
   - Use Lurch now: https://lurchmath.github.io/lurchmath/
 
 theme:
-  name: simplex
+  name: minty
   locale: en
 
 markdown_extensions:
