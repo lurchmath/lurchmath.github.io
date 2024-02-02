@@ -15,7 +15,15 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip3 install mkdocs mkdocs-bootswatch python-markdown-math"
+	"postCreateCommand": "pip3 install mkdocs mkdocs-bootswatch python-markdown-math pymdown-extensions",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Codeium.codeium",
+				"ritwickdey.LiveServer"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
