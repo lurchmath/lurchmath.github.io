@@ -38,30 +38,55 @@ examples.
 <div class='lurch-embed' width='100%' height='400px'>
 </div>
 
-## Important details about expressions
-
-You have surely noticed that the expression you just added is surrounded in
-a blue-ish border.  This border distinguishes meaningful content from
-non-meaningful content, and makes it clear which portions of your document Lurch
-is paying attention to.  We'll talk more about this decoration (and how to hide
-it when you want to) later.
-
 To edit your new content, you have the same options as you did for
 [expository math](tut-02-expository-math.md); you can click it or place your
 cursor on it and hit enter.
 
-When adding or editing math expressions, you are not restricted to using only
-the equation editor.  Under the Edit menu, find the Preferences option (all the
-way at the bottom---you may need to scroll down).  In its "Math content" tab,
-you can select which type of expression editor to use, from these options:
+!!! danger "Important: Recognizing meaningful content"
 
- - Beginner: the default you used above, a standard equation editor widget
-   (thanks to the open-source tool [MathLive](https://cortexjs.io/mathlive/))
- - Intermediate: incorporates both the equation editor for those who wish to use
-   it and a text box that uses a special *Lurch notation.*  That notation is
-   [partially documented here](lurch-notation.md).
- - Advanced: for those who have mastered Lurch notation, a minimalist dialog
-   that lets you stay in the flow of your document
+    You have surely noticed that the expression you just added is surrounded in
+    a blue-ish border.  **This border distinguishes meaningful content from
+    non-meaningful content, and makes it clear which portions of your document
+    Lurch is paying attention to.**  We'll talk more about this decoration (and
+    how to hide it when you don't want to see it) in later parts of this
+    tutorial.
+
+## For power users
+
+Just as expository math expressions can be entered using an equation editor *or*
+LaTeX notation, meaningful mathematics can also be entered in more than one way.
+(Again, users happy with the equation editor can skip this section.)
+
+!!! note "Exercise: Change the input mode"
+
+    1. In the Lurch application above, click the Edit menu and choose the
+       Preferences item (at the very bottom, which may require you to scroll).
+    2. Find the setting for "Type of expression editor to use" and change
+       it to "Intermediate."
+    3. Click OK to save your settings.
+
+Much like intermediate mode for editing expository math content allows you to
+use the equation editor or LaTeX notation, the intermediate mode for editing
+meaningful math expressions allows you to use the equation editor or *a custom
+Lurch notation for meaningful expressions.*
+
+!!! warning "Warning: This is not LaTeX"
+
+    LaTeX was designed for presentation, not meaning.  The notation used for
+    meaningful expressions in Lurch is not LaTeX, but a derivative of AsciiMath
+    specific to the Lurch project.  We hope to make this notation customizable
+    in a future version of Lurch, but in this early phase of the project it is
+    not.  [You can read more about the Lurch notation here.](lurch-notation.md)
+    Or you can choose to use the equation editor instead.
+
+Like with expository math, meaningful math has three editor modes, and you can
+choose the one you like best:
+
+ - **Beginner mode** is the default mode and uses just an equation editor widget.
+ - **Intermediate mode** incorporates both the equation editor for those who
+   wish to use it and a text box that uses [Lurch notation](lurch-notation.md).
+ - **Advanced mode** is for those who have mastered Lurch notation, and shows a
+   very minimalist dialog that aims to let you stay in the flow of your work.
 
 ## Is lurch grading my math *now?*
 

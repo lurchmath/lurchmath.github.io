@@ -1,17 +1,19 @@
 
 # Adding mathematical content
 
-The simplest way to enter mathematical content into Lurch is to use either
-LaTeX notation (for those who know it) or an equation editor (for those
-unfamiliar with LaTeX).
+The simplest way to enter mathematical content into Lurch is to use an equation
+editor (powered by [MathLive](https://cortexjs.io/mathlive/)).  For users who
+are familiar with LaTeX, we have that option as well, but let's start with the
+simpler method.
 
 !!! note "Exercise: Add some math"
 
     1. In the Lurch application below, click the Insert menu and choose
        "Expository math."
-    2. In the dialog that pops up, use either the LaTeX input box or
-       the equation editor below it, whichever you prefer.
-       For example, you might type the LaTeX code `1-x^2` to represent $1-x^2$.
+    2. In the dialog that pops up, enter some math using the equation editor.
+       For example, you might type `1-x^2` and watch it become $1-x^2$.
+       (If you want a math keyboard, open one by clicking the keyboard icon
+       in the equation editor.)
     3. Click OK to place your math into the document.
 
 <div class='lurch-embed' width='100%' height='300px'>
@@ -28,17 +30,35 @@ To later edit your new mathematical expression, you can either
 Both options open the same dialog box you had when adding the math, but now for
 editing it instead.
 
-## Staying in sync
+## For power users
 
-You have probably noticed that the two input methods stay in sync with one
-another.  As you type LaTeX, it is automatically rendered in the equation
-editor, and if you use the equation editor, it updates the LaTeX code box as
-well.  This is useful in two ways.
+Users familiar with LaTeX may want to use that notation instead of an equation
+editor.  (Other users can skip this section.)  We have a setting that lets you
+choose the type of interface you would like.
 
-For those who type LaTeX, it's nice to see a live preview, to be sure that you
-have typed what you intended.  For those who use the equation editor, it
-provides a simple way to learn the corresponding LaTeX syntax, if the user
+ - **Beginner mode** is the equation editor you saw in the exercise above.
+ - **Intermediate mode** shows a LaTeX input box and the equation editor, and
+   you can use either one, and they stay in sync.
+ - **Advanced mode** shows only the LaTeX input box and a typeset preview, with
+   minimal styling.
+
+The syncing of LaTeX and the equation editor in intermediate mode is useful in
+two ways.  For those who type LaTeX, it's nice to see a live preview, to be sure
+that you have typed what you intended.  For those who use the equation editor,
+it provides a simple way to learn the corresponding LaTeX syntax, if the user
 wants to do so.
+
+!!! note "Exercise: Change the input mode"
+
+    1. In the Lurch application above, click the Edit menu and choose the
+       Preferences item (at the very bottom, which may require you to scroll).
+    2. Find the setting for "Type of expository math editor to use" and change
+       it to "Intermediate."
+    3. Click OK to save your settings.
+    4. Repeat the exercise above to try out the new intermediate-mode editor for
+       expository math content.
+    5. Try this exercise again, but use Advanced mode, then switch the setting
+       to the one you like best.
 
 ## Is Lurch grading my math?
 
