@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Nathan Carter and Ken Monks">
-        
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>The Lurch Project</title>
-        <link href="/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
+        <link rel="canonical" href="https://lurchmath.github.io/tut-02-expository-math/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Adding mathematical content - The Lurch Project</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-cave-light.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
@@ -20,7 +20,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/.">The Lurch Project</a>
+                <a class="navbar-brand" href="..">The Lurch Project</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -31,13 +31,13 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="/." class="nav-link">Home</a>
+                                <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="navitem">
-                                <a href="/about/" class="nav-link">About</a>
+                                <a href="../about/" class="nav-link">About</a>
                             </li>
                             <li class="navitem">
-                                <a href="/tutorial-toc/" class="nav-link">Tutorial</a>
+                                <a href="../tutorial-toc/" class="nav-link">Tutorial</a>
                             </li>
                             <li class="navitem">
                                 <a href="https://lurchmath.github.io/lurchmath/" class="nav-link">Use Lurch now</a>
@@ -51,7 +51,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/lurchmath/lurchmath.github.io" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                                <a href="https://github.com/lurchmath/lurchmath.github.io/edit/master/docs/tut-02-expository-math.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -60,15 +60,77 @@
 
         <div class="container">
             <div class="row">
-
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
     </div>
 
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#adding-mathematical-content" class="nav-link">Adding mathematical content</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#editing-math-youve-added" class="nav-link">Editing math you've added</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#staying-in-sync" class="nav-link">Staying in sync</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#is-lurch-grading-my-math" class="nav-link">Is Lurch grading my math?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
 
+<h1 id="adding-mathematical-content">Adding mathematical content</h1>
+<p>The simplest way to enter mathematical content into Lurch is to use either
+LaTeX notation (for those who know it) or an equation editor (for those
+unfamiliar with LaTeX).</p>
+<div class="admonition note">
+<p class="admonition-title">Exercise: Add some math</p>
+<ol>
+<li>In the Lurch application below, click the Insert menu and choose
+   "Expository math."</li>
+<li>In the dialog that pops up, use either the LaTeX input box or
+   the equation editor below it, whichever you prefer.
+   For example, you might type the LaTeX code <code>1-x^2</code> to represent <span class="arithmatex">\(1-x^2\)</span>.</li>
+<li>Click OK to place your math into the document.</li>
+</ol>
+</div>
+<div class='lurch-embed' width='100%' height='300px'>
+</div>
+
+<h2 id="editing-math-youve-added">Editing math you've added</h2>
+<p>To later edit your new mathematical expression, you can either</p>
+<ul>
+<li>click the expression or</li>
+<li>move your cursor over the expression with the arrow keys on the keyboard
+   (which will highlight the expression) and then press Enter on the keyboard.</li>
+</ul>
+<p>Both options open the same dialog box you had when adding the math, but now for
+editing it instead.</p>
+<h2 id="staying-in-sync">Staying in sync</h2>
+<p>You have probably noticed that the two input methods stay in sync with one
+another.  As you type LaTeX, it is automatically rendered in the equation
+editor, and if you use the equation editor, it updates the LaTeX code box as
+well.  This is useful in two ways.</p>
+<p>For those who type LaTeX, it's nice to see a live preview, to be sure that you
+have typed what you intended.  For those who use the equation editor, it
+provides a simple way to learn the corresponding LaTeX syntax, if the user
+wants to do so.</p>
+<h2 id="is-lurch-grading-my-math">Is Lurch grading my math?</h2>
+<p>Not yet!  We're just getting started.
+<a href="../tut-03-meaningful-math/">Let's learn how to input <em>meaningful</em> math.</a></p></div>
             </div>
         </div>
 
@@ -76,18 +138,18 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="/js/jquery-3.6.0.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
         <script>
-            var base_url = "/",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js"></script>
+        <script src="../js/base.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/lurchmath/lurchmath@master/embedded.js"></script>
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script src="/search/main.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

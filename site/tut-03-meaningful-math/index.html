@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Nathan Carter and Ken Monks">
-        <link rel="canonical" href="https://lurchmath.github.io/about/">
+        <link rel="canonical" href="https://lurchmath.github.io/tut-03-meaningful-math/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>About - The Lurch Project</title>
+        <title>Meaningful mathematics - The Lurch Project</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -33,8 +33,8 @@
                             <li class="navitem">
                                 <a href=".." class="nav-link">Home</a>
                             </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">About</a>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">About</a>
                             </li>
                             <li class="navitem">
                                 <a href="../tutorial-toc/" class="nav-link">Tutorial</a>
@@ -51,17 +51,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href=".." class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../tutorial-toc/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/lurchmath/lurchmath.github.io/edit/master/docs/about.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/lurchmath/lurchmath.github.io/edit/master/docs/tut-03-meaningful-math.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -81,13 +71,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#about-lurch" class="nav-link">About Lurch</a>
+            <li class="nav-item" data-level="1"><a href="#meaningful-mathematics" class="nav-link">Meaningful mathematics</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#authors" class="nav-link">Authors</a>
+            <li class="nav-item" data-level="2"><a href="#two-types-of-mathematical-content" class="nav-link">Two types of mathematical content</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#contributors" class="nav-link">Contributors</a>
+            <li class="nav-item" data-level="2"><a href="#why-two-types-of-math" class="nav-link">Why two types of math?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#important-details-about-expressions" class="nav-link">Important details about expressions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#is-lurch-grading-my-math-now" class="nav-link">Is lurch grading my math now?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -98,27 +96,68 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="about-lurch">About Lurch</h1>
-<p>See <a href="../">the main page</a> for a description of the software's purpose.</p>
-<h2 id="authors">Authors</h2>
-<p>The Lurch project was created and has been principally designed and developed by
-<a href="http://faculty.bentley.edu/empl/c/ncarter">Nathan Carter</a> and
-<a href="http://monks.scranton.edu">Ken Monks</a>, beginning informally in 1999 and
-continuing to the present.</p>
-<p>Major time was invested between 2008--2012 while supported by NSF DUE
-CCLI grant #0736644, and from 2018--present as part of a major update.</p>
-<h2 id="contributors">Contributors</h2>
-<p>The following students have also contributed work at various times over the
-years (and are now no longer students!).</p>
+<h1 id="meaningful-mathematics">Meaningful mathematics</h1>
+<h2 id="two-types-of-mathematical-content">Two types of mathematical content</h2>
+<p>Lurch allows users to type math in two ways:</p>
 <ul>
-<li>Jenna Bergevin</li>
-<li>Derek Breen</li>
-<li>Paul Christiano</li>
-<li>Ryan Colwell</li>
-<li>Timothy Delaney</li>
-<li>George Tillisch</li>
-<li>Jeffrey Wright</li>
-</ul></div>
+<li><strong><em>meaningful math,</em></strong> which the user wants Lurch to read and grade, giving
+   feedback about its correctness; and</li>
+<li><strong><em>expository math,</em></strong> which the user wrote to give some intuition for a human
+   reader of their work, but which Lurch should ignore.</li>
+</ul>
+<p>In the <a href="../tut-02-expository-math/">previous tutorial page,</a> we entered only
+expository math, not meaningful math.  If we asked Lurch to check our work, it
+would give us no feedback at all, because it knows to ignore content we've
+explicitly called "expository."</p>
+<h2 id="why-two-types-of-math">Why two types of math?</h2>
+<p>Students will almost always want to use meaningful math only, so that Lurch
+will read and grade all of their work.  But instructors may want to enter
+a mix of meaningful and expository math.</p>
+<p>For example, if an instructor is defining a new set of axioms, and they want to
+intersperse examples that explain the axioms, they don't want Lurch to
+misinterpret the examples as axioms, or as student work to be graded.  (The
+instructor might even give examples of what you <em>can't</em> do with the axioms!)
+So they would use meaningful math for the axioms, but expository math for the
+examples.</p>
+<div class="admonition note">
+<p class="admonition-title">Exercise: Meaningful math</p>
+<ol>
+<li>In the Lurch application below, click the Insert menu and choose
+   "Expression."</li>
+<li>In the dialog that pops up, type a simple expression, like <span class="arithmatex">\(x&lt;0\)</span>.</li>
+<li>Click OK to place your math into the document.</li>
+</ol>
+</div>
+<div class='lurch-embed' width='100%' height='400px'>
+</div>
+
+<h2 id="important-details-about-expressions">Important details about expressions</h2>
+<p>You have surely noticed that the expression you just added is surrounded in
+a blue-ish border.  This border distinguishes meaningful content from
+non-meaningful content, and makes it clear which portions of your document Lurch
+is paying attention to.  We'll talk more about this decoration (and how to hide
+it when you want to) later.</p>
+<p>To edit your new content, you have the same options as you did for
+<a href="../tut-02-expository-math/">expository math</a>; you can click it or place your
+cursor on it and hit enter.</p>
+<p>When adding or editing math expressions, you are not restricted to using only
+the equation editor.  Under the Edit menu, find the Preferences option (all the
+way at the bottom---you may need to scroll down).  In its "Math content" tab,
+you can select which type of expression editor to use, from these options:</p>
+<ul>
+<li>Beginner: the default you used above, a standard equation editor widget
+   (thanks to the open-source tool <a href="https://cortexjs.io/mathlive/">MathLive</a>)</li>
+<li>Intermediate: incorporates both the equation editor for those who wish to use
+   it and a text box that uses a special <em>Lurch notation.</em>  (Documentation for
+   that notation is forthcoming!  Until we've added it, just know that there is
+   a significant overlap between Lurch notation and
+   <a href="https://asciimath.org/">AsciiMath</a>.)</li>
+<li>Advanced: for those who have mastered Lurch notation, a minimalist dialog
+   that lets you stay in the flow of your document</li>
+</ul>
+<h2 id="is-lurch-grading-my-math-now">Is lurch grading my math <em>now?</em></h2>
+<p>No, but that's the very next thing!
+<a href="../tut-04-validation/">Learn how to have Lurch grade your document.</a></p></div>
             </div>
         </div>
 
