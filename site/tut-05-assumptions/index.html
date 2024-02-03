@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Nathan Carter and Ken Monks">
-        <link rel="canonical" href="https://lurchmath.github.io/tut-04-validation/">
+        <link rel="canonical" href="https://lurchmath.github.io/tut-05-assumptions/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Checking your reasoning - The Lurch Project</title>
+        <title>Making assumptions - The Lurch Project</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -51,7 +51,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/lurchmath/lurchmath.github.io/edit/master/docs/tut-04-validation.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/lurchmath/lurchmath.github.io/edit/master/docs/tut-05-assumptions.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -71,17 +71,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#checking-your-reasoning" class="nav-link">Checking your reasoning</a>
+            <li class="nav-item" data-level="1"><a href="#making-assumptions" class="nav-link">Making assumptions</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#passing-your-first-quiz" class="nav-link">Passing your first quiz</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#throwing-the-game" class="nav-link">Throwing the game</a>
+            <li class="nav-item" data-level="2"><a href="#the-user-interface-for-assumptions" class="nav-link">The user interface for assumptions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#questions" class="nav-link">Questions?</a>
+            <li class="nav-item" data-level="2"><a href="#feedback-about-assumptions" class="nav-link">Feedback about assumptions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#keeping-mistakes-local" class="nav-link">Keeping mistakes local</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#speaking-of-proofs" class="nav-link">Speaking of proofs...</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -92,57 +96,100 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="checking-your-reasoning">Checking your reasoning</h1>
-<div class='lurch-embed' width='100%' height='400px'>
+<h1 id="making-assumptions">Making assumptions</h1>
+<p>Let's take a second look at the example document below, which you saw already in
+<a href="../tut-04-validation/">the previous tutorial</a>.
+Why did Lurch put positive feedback on the second expression, but not the first?</p>
+<div class='lurch-embed' width='100%' height='300px' validate='true'>
 Let's state the obvious.  First, we `assume x < 0`.
 
 Then we can surely conclude (drum roll) that `x < 0`!
 </div>
 
-<h2 id="passing-your-first-quiz">Passing your first quiz</h2>
-<p>The document above contains two meaningful mathematical expressions.  You know
-that they are meaningful (not just expository) because of the blue borders.
-But Lurch has not yet given any indication of whether the (very simple!)
-reasoning in the above document is correct.  Let's make that happen.</p>
+<p>In mathematics, most facts are not proven in isolation, but only after making
+certain <em>assumptions.</em>  A theorem will say, "If such-and-such a fact, then we
+know that some other facts."  This is why in a geometry class, many textbooks
+let a student justify a line in a proof with the word "given."  Lurch has
+support for this essential piece of mathematical reasoning.</p>
+<h2 id="the-user-interface-for-assumptions">The user interface for assumptions</h2>
+<p>To make an expression into an assumption, you use a different technique
+depending on which editing mode you prefer.  (Recall the three editing modes
+introduced at the end of <a href="../tut-03-meaningful-math/">an earlier tutorial</a>.)</p>
+<ul>
+<li><strong>In beginner mode,</strong> there is a checkbox in the expression editing dialog
+   that says "Assumption" and is unchecked by default.  Check it to make an
+   expression into an assumption; leave it unchecked to have your expression
+   treated as an ordinary statement.</li>
+<li><strong>In intermediate mode,</strong> the top of the expression editing dialog has a
+   drop-down menu for choosing the kind of content you're inserting.  One of the
+   options is "Assumption," in contrast to the default "Statement."  (There are
+   many other options on that drop-down that we will come to in later tutorial
+   pages.)</li>
+<li><strong>In advanced mode,</strong> you must include in the input you provide a word that
+   signals that the content is an assumption.  For isntance, instead of typing
+   <code>x&lt;0</code> into the dialog box, you can type <code>Assume x&lt;0</code>.  For a full list of the
+   words that signal "assumption," see the
+   <a href="../lurch-notation/">Lurch notation reference page</a>.</li>
+</ul>
+<h2 id="feedback-about-assumptions">Feedback about assumptions</h2>
+<p>Lurch checks your reasoning to see if any of the steps in it are invalid.  But
+in mathematics, you're allowed to assume whatever you want.  (Some assumptions
+are more useful or strategic than others, but no assumption is an example of
+invalid reasoning.)  Consequently, Lurch does not mark assumptions as right or
+wrong; it just doesn't mark them at all.  You can see this in the document shown
+at the top of this page.</p>
 <div class="admonition note">
-<p class="admonition-title">Exercise: Ask for a grade</p>
+<p class="admonition-title">Exercise: Make/break assumptions</p>
 <ol>
-<li>In the document shown above, click the Document menu and choose "Check my
-   reasoning."</li>
-<li>You should find that the second meaningful mathematics gets a green check
-   mark from Lurch, your virtual grader.</li>
-<li>Hover your mouse pointer over that green check mark.  You should see
-   Lurch give you some small positive feedback ("Good work!").</li>
+<li>Edit the document at the top of this page.  Change the first expression
+   so that it is no longer an assumption, and ask Lurch to check your
+   reasoning.</li>
+<li>Does its response make sense to you?  (If not, see the explanation
+   below.)</li>
+<li>Try toggling the "assumption" status of that same expression using the
+   other editing modes as well (beginner, intermediate, and advanced).</li>
 </ol>
 </div>
-<h2 id="throwing-the-game">Throwing the game</h2>
-<p>Let's make a mistake to be sure that Lurch isn't practicing grade inflation.
-If we do something mathematically invalid, it ought to make an error.</p>
-<div class="admonition note">
-<p class="admonition-title">Exercise: Oops</p>
-<ol>
-<li>In the same document you see above, click the second expression to edit
-   it.</li>
-<li>Change its meaning from <span class="arithmatex">\(x&lt;0\)</span> to <span class="arithmatex">\(y&lt;0\)</span> and click OK.</li>
-<li>Note that all feedback has disappeared from your document.  When you make
-   an edit, Lurch is aware that its previous feedback may no longer apply,
-   and it erases it.</li>
-<li>Ask Lurch to check your reasoning again, and then use your mouse to hover
-   over the feedback icon for more information.</li>
-</ol>
+<h2 id="keeping-mistakes-local">Keeping mistakes local</h2>
+<p>When your document has two copies of the expression <span class="arithmatex">\(x&lt;0\)</span>, and neither one is
+marked as an assumption, Lurch grades the first one as unjustified and the
+second one as justified.  The reason for this is that Lurch does not propagate
+your errors throughout your document, but tries to keep them as contained as
+possible.  To explain this better, consider the following example.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Betsy is a geometry student who wrote a 10-line proof and submitted it for
+homework.  All the work is correct, except for line 4, which is not properly
+justified.  How many points does Betsy get for this homework problem?</p>
 </div>
-<p>You'll notice that Lurch doesn't tell you that you're wrong.  This is
-appropriate because Lurch doesn't want to jump to conclusions.  After all,
-maybe <span class="arithmatex">\(y&lt;0\)</span> and maybe it isn't--we haven't specified!  So Lurch just lets you
-know that you haven't provided any evidence to support this conclusion.  Whether
-it's true or false is another matter--Lurch is just reading the evidence you've
-provided (or failed to provide).</p>
-<h2 id="questions">Questions?</h2>
-<p>This exercise may have raised many questions in your mind, such as how the first
-expression counts as an assumption, why it didn't get any feedback attached to
-it, and what are the limits of Lurch's mathematical knowledge.  We will cover
-all of those things in this tutorial, one at a time.</p>
-<p><a href="../tut-05-assumptions/">Let's start with learning about assumptions.</a></p></div>
+<p>Perhaps some geometry teachers would give Betsy 9 out of 10 points, because 9
+lines were correct and 10 were incorrect.  Perhaps other teachers would give her
+3 out of 10 points, because the first 3 lines were correct, but everything after
+that is suspect, because lines 5-10 might rely on the invalid line 4.</p>
+<p>Lurch tries to be as generous as possible.  <strong>If one of your statements is not
+sufficiently justified, Lurch marks it as such, but later statements are still
+free to rely on the unjustified one.</strong>  Thus a proof with even one unjustified
+statement is not a complete proof, even if all the statements but one have green
+check marks on them.</p>
+<p>We chose to have Lurch behave this way because it permits students to assemble a
+proof in any order.  For example, many instructors teach students to work "from
+the outside in," building some of the starting lines and some of the concluding
+lines for a proof, before filling in one or two insightful steps in the middle
+that connects it all together.  For example, we will later see examples of
+proofs like the following, and Lurch will grade most of the work as correct.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <span class="arithmatex">\(x\)</span> be arbitrary, then assume <span class="arithmatex">\(x&gt;0\)</span>.  Consequenly, <span class="arithmatex">\(x^2+1&gt;0\)</span>.</p>
+<p>(Here's the part I need to fill in before submitting my homework!)</p>
+<p>My goal is to show that <span class="arithmatex">\(x^2+k&gt;p\)</span>.  Once I've shown that, I can conclude
+that for any <span class="arithmatex">\(x&gt;0\)</span>, <span class="arithmatex">\(x^2+k&gt;p\)</span>.</p>
+</div>
+<p>In such a proof, Lurch will mark every statement other than the first <span class="arithmatex">\(x^2+k&gt;p\)</span>
+correct, because <em>only that one line</em> is missing its justification.  This allows
+students to get positive feedback about their work en route to a complete proof,
+even if they don't choose to write it in the order it will eventually be read.</p>
+<h2 id="speaking-of-proofs">Speaking of proofs...</h2>
+<p>...we haven't actually done any yet!  <a href="../tut-06-environments/">Let's do a proof now!</a></p></div>
             </div>
         </div>
 
