@@ -8,7 +8,7 @@
         <meta name="author" content="Nathan Carter and Ken Monks">
         <link rel="canonical" href="https://lurchmath.github.io/tut-07-rules/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>This tutorial page is coming soon - The Lurch Project</title>
+        <title>Reading and using rules - The Lurch Project</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -71,8 +71,24 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#this-tutorial-page-is-coming-soon" class="nav-link">This tutorial page is coming soon</a>
+            <li class="nav-item" data-level="1"><a href="#reading-and-using-rules" class="nav-link">Reading and using rules</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#lurch-starts-out-empty" class="nav-link">Lurch starts out empty</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#add-meaning-with-rules" class="nav-link">Add meaning with rules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#checking-your-reasoning-with-rules" class="nav-link">Checking your reasoning with rules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#where-to-go-from-here" class="nav-link">Where to go from here?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -80,8 +96,72 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="this-tutorial-page-is-coming-soon">This tutorial page is coming soon</h1>
-<p>Check back later to read this tutorial page.  We are actively developing this project and its documentation in Spring 2024.</p></div>
+<h1 id="reading-and-using-rules">Reading and using rules</h1>
+<h2 id="lurch-starts-out-empty">Lurch starts out empty</h2>
+<p>Consider the following simple bit of mathematics, which Lurch does <em>not</em>
+consider to be a valid inference.  What could possibly be going on?</p>
+<div class='lurch-embed' width='100%' height='300px' validate='true'>
+`Assume x < 0`.  Then surely `x < 10`.
+</div>
+
+<p>The reason Lurch does not grade this as correct is because, by default, Lurch
+has <em>absolutely no meaning for any mathematical symbols loaded.</em>  In other
+words, Lurch does not assume any particular meaning for symbols like <span class="arithmatex">\(&lt;\)</span> or <span class="arithmatex">\(0\)</span>
+or <span class="arithmatex">\(10\)</span>.  </p>
+<p>If you want it to know how those symbols operate, you have to load in a
+mathematical library that defines them.  Then those symbols will behave in the
+expected way.  (Depending, of course, on which mathematical definitions appear
+in the library you load!)</p>
+<h2 id="add-meaning-with-rules">Add meaning with rules</h2>
+<p>In order for Lurch to permit new inferences that don't hold by default, we must
+give it new facts.  These come in the form of new <strong>Rules</strong> or <strong>Axioms.</strong>  In
+practice, a rule and an axiom behave exactly the same in Lurch, but typically
+if you're building a logical system, you form it out of "rules," and if you're
+building a mathematical theory, you form it out of "axioms."  You can use
+whichever word you prefer; they behave the same way.</p>
+<p>Let's take the document above and some facts that will help us get the
+conclusion we're hoping for.</p>
+<div class='lurch-embed' width='100%' height='500px' validate='true'>
+<rule>
+The less than operation is transitive.  Specifically, if we
+`assume a < b` and we `assume b < c` then we can conclude `a < c`.
+</rule>
+
+<axiom>
+`0 < 10`
+</axiom>
+
+Now we should be able to get the conclusion we want:
+
+If we `assume x < 0` then we can conclude that `x < 10`.
+</div>
+
+<h2 id="checking-your-reasoning-with-rules">Checking your reasoning with rules</h2>
+<p>Notice that rules and axioms do not get checked.  You can make <em>whatever you
+like</em> into a rule or axiom, and Lurch will not argue with you.</p>
+<div class="admonition note">
+<p class="admonition-title">Exercise: Even more transitive</p>
+<p>Add a new assumption to the end of the document immediately above, that
+<span class="arithmatex">\(10 &lt; x^2\)</span>.  After that assumption, conclude that <span class="arithmatex">\(x &lt; x^2\)</span>.</p>
+<p>Now delete the expression that says <span class="arithmatex">\(x &lt; 10\)</span>.  Does Lurch still grade your
+final conclusion of <span class="arithmatex">\(10 &lt; x^2\)</span> correct?</p>
+</div>
+<p>The exercise above shows that Lurch can fill in some basic steps of reasoning.
+(Obviously it can't fill in too many missing steps, or it would be an automated
+theorem prover, and that's not its goal.)  But in this case, it was able to fill
+in the missing <span class="arithmatex">\(x &lt; 10\)</span> that you deleted, and use it to complete the chain of
+reasoning.</p>
+<p>If you're an instructor and you're worried that perhaps Lurch is too forgiving,
+filling in steps that students ought to have to write down to show that they
+know what they're talking about, fear not.  We aim to make Lurch's intelligence
+customizable, so that you can choose how many steps (if any) it will let the
+user skip.  But that feature is still to come.</p>
+<h2 id="where-to-go-from-here">Where to go from here?</h2>
+<p>There are two possible next steps.  If you want to dive into the nitty gritty of
+how rules are defined, you can step off onto a rabbit trail about
+<a href="../tut-07b-metavariables/">why the rule shown above is actually wrong</a>.
+But if you just want to move along with the main tutorial, check out
+<a href="../tut-08-document-header/">how to hide and show rules to make documents more compact</a>.</p></div>
             </div>
         </div>
 
