@@ -29,7 +29,7 @@ Here is the table of contents for the tutorial.  It is a work in progress.
 ### The main ingredients
 
  - [Making assumptions](tut-05-assumptions.md)
- - [Creating and using environments](tut-06-environments.md) (not yet written---coming soon!)
+ - [Creating and using environments](tut-06-environments.md)
  - [Reading and using rules](tut-07-rules.md) (not yet written---coming soon!)
  - [Hiding and showing rules](tut-08-document-header.md) (not yet written---coming soon!)
 

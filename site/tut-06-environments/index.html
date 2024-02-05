@@ -8,7 +8,7 @@
         <meta name="author" content="Nathan Carter and Ken Monks">
         <link rel="canonical" href="https://lurchmath.github.io/tut-06-environments/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>This tutorial page is coming soon - The Lurch Project</title>
+        <title>Creating and using environments - The Lurch Project</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -71,8 +71,24 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#this-tutorial-page-is-coming-soon" class="nav-link">This tutorial page is coming soon</a>
+            <li class="nav-item" data-level="1"><a href="#creating-and-using-environments" class="nav-link">Creating and using environments</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#the-need-for-environments" class="nav-link">The need for environments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#interacting-with-environments" class="nav-link">Interacting with environments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#too-many-blue-borders" class="nav-link">Too many blue borders?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#more-environments" class="nav-link">More environments</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -80,8 +96,99 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="this-tutorial-page-is-coming-soon">This tutorial page is coming soon</h1>
-<p>Check back later to read this tutorial page.  We are actively developing this project and its documentation in Spring 2024.</p></div>
+<h1 id="creating-and-using-environments">Creating and using environments</h1>
+<p>The very tiny Lurch documents we've seen so far are just to get us started.
+They are not, of course, representative of real work with the application.
+Typical mathematical documents will contain multiple theorem statements and
+their corresponding proofs, possibly with other content as well, such as
+explanations in between the theorems.</p>
+<h2 id="the-need-for-environments">The need for environments</h2>
+<p>We therefore need a way to express when a proof begins and when it ends,
+as well as where theorem statements begin and end.  We do this with a feature
+called <em>environments.</em></p>
+<p>Consider the document below, which uses the most basic theorem from
+propositional logic to illustrate both a <em>theorem</em> environment (the statement of
+the theorem) and a <em>proof</em> environment (the proof of the theorem).</p>
+<div class='lurch-embed' width='100%' height='400px' validate='true'>
+<theorem>
+`If P` is true, then we can conclude that `P` is true.
+</theorem>
+<proof>
+Like the theorem says, we'll `assume P` to begin.  Then, obviously, `P` is true,
+so the theorem is proven.
+</proof>
+</div>
+
+<p>Environments are shown, by default, with blue borders around them, just like
+expressions are, to indicate that they are meaningful portions of the document
+that Lurch is paying attention to when grading your work.  For example, in the
+small document above, you can see that not only does the final expression in the
+proof get a green check mark, but the proof as a whole gets a green check mark,
+as does the corresponding theorem.  That's because Lurch knows what those
+environments mean, and that they should be checked as part of its grading
+process.</p>
+<div class="admonition note">
+<p class="admonition-title">Exercise: Mess it up</p>
+<p>Adjust the document shown above so that the proof is no longer valid.
+(For example, you could change the final <span class="arithmatex">\(P\)</span> to a <span class="arithmatex">\(Q\)</span>.)
+Ask Lurch to check the document again.  Which feedback icons changed?</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Surprise!</p>
+<p>If you did the exercise above, you may be surprised to see the result.
+Why does the theorem keep its green check marks even though its proof is
+invalid?  Is Lurch making a mistake?</p>
+<p><em>This is not typical.  It is happening here because this theorem is trivial.</em></p>
+<p>Lurch actually knows that the theorem is true as soon as it reads it,
+without seeing the proof, because the theorem is self-evidently true.
+So it grades the theorem correct without even reading the proof.
+But then the proof is incorrect, and so is graded as such.</p>
+<p>But the overwhelming majority of theorems are not trivially true, and thus
+Lurch will rely on the proof you provide.  If you provide an invalid proof,
+your theorem will immediately lose its green check marks.  We'll see that
+soon in upcoming tutorial pages, when we try some harder proofs.</p>
+</div>
+<h2 id="interacting-with-environments">Interacting with environments</h2>
+<p>You can move your cursor in and out of environments in the expected ways, using
+the mouse and arrow keys.  But there are many ways to interact with environments
+while editing a document, including these:</p>
+<ul>
+<li>If you right-click an environment (not one of its inner expressions!) you can
+   change which type of environment it is (e.g., from Theorem to Lemma).</li>
+<li>If your cursor is at the start of an environment and you press Backspace, it
+   merges it with the paragraph before.  (This typically deletes the environment,
+   unless the previous paragraph was empty.)</li>
+<li>If you want to insert a new, empty paragraph above or below the environment
+   containing the cursor, see the relevant items on the Insert menu.  For
+   example, you can insert a blank paragraph between the theorem and proof by
+   putting your cursor in the theorem and choosing to insert a paragraph below
+   it.</li>
+<li>You can add new paragraphs inside a proof (or any kind of environment) by
+   pressing enter while your cursor is inside it.  If you instead intended to
+   add a paragraph outside the environment, see the previous bullet point.</li>
+</ul>
+<h2 id="too-many-blue-borders">Too many blue borders?</h2>
+<p>As you can see in the document above, we're starting to get a lot of blue
+borders around content in the document.  On the one hand, this is great, because
+we know exactly which portions of our document Lurch is paying attention to.
+But on the other hand, it can be distracting, and it's not how math documents
+typically look.</p>
+<p>This is because you are currently in "editing mode," where the user usually
+wants to see the blue borders, so that they can be aware of how their work is
+being interpreted.  But in "presentation mode," those borders are hidden, so
+that the document is more easily readable by a human.</p>
+<div class="admonition note">
+<p class="admonition-title">Exercise: Switch modes</p>
+<p>Toggle between editing mode and presentation mode using the relevant item on
+the Document menu.  Also try using the corresponding keyboard shortcut
+(Ctrl+0 on PC, Command+0 on Mac).  Note that the shortcut uses a zero, <em>not</em>
+a capital "oh."</p>
+</div>
+<h2 id="more-environments">More environments</h2>
+<p>If you right-click an environment and choose "Change environment type," you may
+notice that there are many options besides just Theorem and Proof.  We will
+learn how many of these work in later pages in this tutorial, starting with the
+<a href="../tut-07-rules/">next tutorial page, on the Rule environment</a>.</p></div>
             </div>
         </div>
 
