@@ -1,13 +1,17 @@
 
 # How substitution works in Lurch
 
-This page of the tutorial is a bit of a rabbit trail into some subtleties of how
-Lurch functions, but should be of interest to anyone who wants to define a new
-mathematical system in Lurch from the ground up.
+!!! warning "Warning: Fiddly details of interest to instructors"
 
-We aim to provide several such systems pre-built for users eventually, but for
-those who are interested in developing Lurch or getting in on alpha testing,
-this content is relevant.
+    This page of the tutorial is a bit of a rabbit trail into some subtleties of
+    how Lurch functions, but should be of interest to anyone who wants to define
+    a new mathematical system in Lurch from the ground up.
+
+    We aim to provide several such systems pre-built for users eventually, but
+    for those who are interested in developing Lurch or getting in on alpha
+    testing, this content is relevant.
+
+    **In particular, no student should need to read this page!**
 
 ## We know where to substitute, and where not to
 
