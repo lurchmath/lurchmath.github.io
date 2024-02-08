@@ -35,7 +35,7 @@ Here is the table of contents for the tutorial.  It is a work in progress.
 
 ### Your first proofs
 
- - [Part 1: Propositional logic](tut-09a-real-math.md) (not yet written---coming soon!)
+ - [Part 1: Propositional logic](tut-09a-real-math.md)
  - [Part 2: Constructing a proof](tut-09b-real-math.md) (not yet written---coming soon!)
  - [Part 3: Subproofs exercise](tut-09c-real-math.md) (not yet written---coming soon!)
  - [Part 4: Subproofs solution](tut-09d-real-math.md) (not yet written---coming soon!)
