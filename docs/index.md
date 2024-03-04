@@ -20,7 +20,7 @@ A simple example proof in propositional logic is shown below.
 
 <div class='header'>
 We tell Lurch which symbols our mathematical system requires like this:
-`Declare and or ⇒ ¬`.
+`Declare and, or, implies, not`.
 
 <rule>
 **Conjunction introduction:**
