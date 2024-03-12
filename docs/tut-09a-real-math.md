@@ -8,6 +8,14 @@ starting with propositional logic.  You may have noticed the example proof below
 (in propositional logic) on [the documentation home page](index.md).
 
 <div class='lurch-embed' width='100%' height='500px' validate='true'>
+{
+    "menuData" : {
+        "document" : {
+            "title" : "Document",
+            "items" : "editheader | validate clearvalidation | docsettings temptoggle"
+        }
+    }
+}
 
 <div class='header'>
 We tell Lurch which symbols our mathematical system requires like this:

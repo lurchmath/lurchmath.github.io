@@ -2,6 +2,15 @@
 # Hiding and showing rules
 
 <div class='lurch-embed' width='100%' height='300px' validate='true'>
+{
+    "menuData" : {
+        "document" : {
+            "title" : "Document",
+            "items" : "editheader | validate clearvalidation | docsettings temptoggle"
+        }
+    }
+}
+
 <div class='header'>
 Tell Lurch which symbols are reserved in our mathematical system:
 `Declare and`.
@@ -25,25 +34,28 @@ Where did it come from?
 ## The document header
 
 Every document has an invisible *header,* which is an initial segment of the
-document that is hidden from view.  Any content you could put in your document,
-you can put in its header.  There are two ways to view the document header.
+document that is hidden from view.  It is a place for the document author to put
+any background material on which the document content relies.  Then the document
+is not cluttered with too many definitions, but Lurch still knows what math the
+user is allowed to rely upon in their reasoning.
 
- 1. From the Document menu, choose "Edit document header in new window."
-    This opens a new tab in your browser containing the document header.
-     - The border of that document is blue dashes, to make it clear that it's
-       not a document in its own right, just the header of some other document.
-     - If you make changes and save, they propagate back to the header in the
-       original browser tab.
- 2. From the Document menu, choose "Move header into document."
-     - This can be easier, because it keeps everything in one tab.
-     - But if you want to reverse this operation, you have to (carefully) select
-       exactly the content you want moved back into the header, and then choose
-       "Move selection ot end of header" from the Document menu.
-     - For this reason, option 1 is probably better.
+In the main Lurch application, instructors can edit the contents of the document
+header, importing entire other documents into it by specifying their web
+address.  We will not cover that feature here.
+
+In the small copy of Lurch included in these tutorial pages, we provide a simple
+way for you to view and edit the document header:  From the Document menu,
+choose "Edit document header in new window."  This opens a new tab in your
+browser containing the document header.
+
+ - The border of that document is blue dashes, to make it clear that it's
+   not a document in its own right, just the header of some other document.
+ - If you make changes and save, they propagate back to the header in the
+   original browser tab.
 
 !!! note "Exercise: View the header"
 
-    In the document shown above, use method 1 to view its header.
+    In the document shown above, use the method just described to view its header.
     That is, click the Document menu, and choose "Edit document header in new
     window."
 
@@ -84,6 +96,15 @@ an option for those who want it.
         Document menu to re-check the reasoning in the document.
      5. Observe that the conclusion is no longer judged correct, because you
         removed from the document header the rule on which it depended.
+
+## Lurch doesn't always use the header
+
+When Lurch documents get more complex, even writing the rules in the header is
+too cumbersome.  Once you're 10 weeks into a course, you've learned too much
+mathematics to sum it up in one document.  So you can make a series of Lurch
+documents, each importing all the content of earlier ones.  But that is for a
+more advanced section of the tutorial.  For now, we will use the header to store
+the small number of rules we'll need for each example.
 
 ## Let's do some *actual* mathematics
 
