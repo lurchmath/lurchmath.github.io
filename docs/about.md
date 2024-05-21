@@ -6,7 +6,7 @@ See [the main page](index.md) for a description of the software's purpose.
 ## Authors
 
 The Lurch project was created and has been principally designed and developed by
-[Nathan Carter](http://faculty.bentley.edu/empl/c/ncarter) and
+[Nathan Carter](https://faculty.bentley.edu/profile/ncarter) and
 [Ken Monks](http://monks.scranton.edu), beginning informally in 1999 and
 continuing to the present.
 
