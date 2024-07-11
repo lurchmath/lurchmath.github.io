@@ -1,0 +1,22 @@
+{
+  "name": "lurchmath.github.io",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Lurch project website",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lurchmath/lurchmath.github.io.git"
+  },
+  "author": "Nathan Carter, Kenneth Monks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lurchmath/lurchmath.github.io/issues"
+  },
+  "homepage": "https://lurchmath.github.io",
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "jsdoc": "~4.0.3",
+    "node-fetch": "^3.3.2"
+  }
+}
