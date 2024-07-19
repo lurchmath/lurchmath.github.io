@@ -33,10 +33,15 @@ const workingFolder = tmpdir()
 const downloadedZip = join( workingFolder, 'lurch.zip' )
 const extractedFolder = join( workingFolder, 'lurch-main' ) // GitHub convention
 const includePattern = '.+\\.js(doc|x)?$|.+\\.[mc]js$'
+const outFolder = join( import.meta.dirname, '..', 'apidocs' )
 
 //
-//  Delete any old downloads so we start afresh
+//  Delete any old downloads or build products so we start afresh
 //
+if ( folderExists( outFolder ) ) {
+    console.log( 'Deleting old output folder...' )
+    rmSync( outFolder, { recursive : true, force : true } )
+}
 if ( fileExists( downloadedZip ) ) {
     console.log( 'Deleting old downloaded zip archive...' )
     rmSync( downloadedZip )
@@ -57,57 +62,46 @@ console.log( 'Unzipping downloaded repository archive...' )
 await execAsync( `unzip "${downloadedZip}" -d "${workingFolder}"` )
 console.log( `    Extracted folder ${extractedFolder}` )
 
-// One test folder contains a symlink to a missing API key file, which is
-// intentional, because the API key should not be submitted to GitHub.  That
-// symlink works only on a developer's local installation, but it confuses
-// jsDoc, so we must eliminate it.  We just drop the whole folder containing it,
-// because no file in that folder contains source code documentation anyway.
-const testFolder = join( extractedFolder, 'lurchmath', 'tests' )
-if ( folderExists( testFolder ) ) {
-    console.log( '    Removing test folder with symlinks to missing API keys...' )
-    rmSync( testFolder, { recursive : true, force : true } )
-}
-
 //
 //  Run the build process for the source code documentation of the UI
 //
-await buildDocs( 'ui', 'lurchmath', {
-    metadata : { title : 'Lurch web user interface' },
+await buildDocs( 'app', 'app', {
+    metadata : { title : 'Lurch web app user interface' },
     source : {
         includePattern,
         excludePattern : 'api-key-secret\\.js|docs\\/',
     },
     opts : {
-        readme : join( extractedFolder, 'lurchmath', 'doc-main.md' )
+        readme : join( extractedFolder, 'app', 'doc-main.md' )
     }
 }, workingFolder, extractedFolder )
 
 //
 //  Run the build process for the source code documentation of the core classes
 //
-await buildDocs( 'core', 'lde', {
+await buildDocs( 'core', 'core', {
     metadata : { title : 'Lurch core classes' },
     source : {
         includePattern,
         excludePattern : 'database\\/*\\.js|src\\/experimental|docs\\/'
     },
     opts : {
-        tutorials : 'lde/tutorials/input',
-        readme : join( extractedFolder, 'lde', 'doc-main.md' )
+        tutorials : 'core/tutorials/input',
+        readme : join( extractedFolder, 'core', 'doc-main.md' )
     }
 }, workingFolder, extractedFolder )
 
 //
 //  Run the build process for the source code documentation of the engine
 //
-await buildDocs( 'engine', 'lde/src/experimental', {
+await buildDocs( 'engine', 'engine', {
     metadata : { title : 'Lurch validation engine' },
     source : {
         includePattern,
         excludePattern : 'scripts\\/acidtests\\.js|docs\\/'
     },
     opts : {
-        readme : join( extractedFolder, 'lde', 'src', 'experimental', 'readme.md' )
+        readme : join( extractedFolder, 'engine', 'doc-main.md' )
     }
 }, workingFolder, extractedFolder )
 

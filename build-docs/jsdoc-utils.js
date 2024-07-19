@@ -13,7 +13,7 @@ const execAsync = promisify( exec )
 import { rmSync } from 'node:fs'
 
 const webRepoRoot = join( import.meta.dirname, '..' )
-const outputParentFolder = join( webRepoRoot, 'site', 'apidocs' )
+const outputParentFolder = join( webRepoRoot, 'apidocs' )
 const jsDocDefaults = {
     plugins : [ "plugins/markdown" ],
     opts : {
