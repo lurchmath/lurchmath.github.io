@@ -113,7 +113,7 @@ Since we assumed $\neg Y$ and proved $\neg X$ from it, we can conclude
     Expect a more stable release in late spring of 2024.
 
 Potential new contributors can check out
-[the new app's GitHub repository here](http://www.github.com/lurchmath/lurchmath).
+[the new app's GitHub repository here](http://www.github.com/lurchmath/lurch).
 
 ## Other tools
 
