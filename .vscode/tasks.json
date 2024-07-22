@@ -4,6 +4,12 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Rebuild site using MkDocs",
+            "type": "shell",
+            "command": "mkdocs build",
+            "problemMatcher": [],
+        },
+        {
             "label": "Rebuild all source code documentation folders",
             "type": "shell",
             "command": "node build-docs/build.js",
