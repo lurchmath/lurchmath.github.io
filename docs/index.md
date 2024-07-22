@@ -10,7 +10,25 @@ doing their proof correctly, so that the student learns the mechanics and rules
 of proof writing more quickly and thoroughly than if they had to wait days for
 manually graded feedback.
 
-## Current status
+## Lurn more
+
+We have recently overhauled our documentation, and more updates are coming soon.
+Not all docs have been updated, but most have been.  New bug fixes, new
+features, and new documentation arrive regularly.
+
+<div class="card-row-3" markdown="1">
+<div markdown="1">
+[Tutorials](tutorial-toc.md)
+</div>
+<div markdown="1">
+[How-To Guides](how-to-toc.md)
+</div>
+<div markdown="1">
+[References](reference-toc.md)
+</div>
+</div>
+
+## Status
 
 The latest version of Lurch is a web application that is in alpha testing at the
 moment.  [You can try it online here!](http://lurchmath.github.io/lurchmath)
@@ -102,32 +120,3 @@ Since we assumed $\neg Y$ and proved $\neg X$ from it, we can conclude
 `not Y implies not X`.
 </proof>
 </div>
-
-## Lurch Sites
-
- * [What is a Lurch Site?](what-is-a-lurch-site.md)
- * [Gallery of Lurch Sites](lurch-sites-gallery.md)
- * [How to create a Lurch Site](how-to-create-a-lurch-site.md)
-
-## Documentation
-
-!!! warning
-
-    We are *just beginning* to write documentation, but you can
-    [find a tutorial online here](tutorial-toc.md).
-    New bug fixes, new features, and new documentation arrive almost every day.
-    Expect a more stable release in late spring of 2024.
-
-Potential new contributors can check out
-[the new app's GitHub repository here](http://www.github.com/lurchmath/lurch).
-
-## Other tools
-
- * [The Lurch Deductive Engine (LDE)](http://github.com/lurchmath/lde) is the
-   set of data structures and algorithms used under the hood to validate proofs
- * We may later incorporate
-   [this JavaScript implementation](http://lurchmath.github.io/earley-parser)
-   of the [Earley parsing algorithm](https://en.wikipedia.org/wiki/Earley_parser)
-   to allow users to customize the notation used in the app, but that remains
-   uncertain.
- * Old versions of our work are archived [here](old-versions.md).
