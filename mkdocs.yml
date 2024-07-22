@@ -16,6 +16,11 @@ nav:
 theme:
   name: minty
   locale: en
+# How the minty theme works with the admonition extension:
+# !!! warning "a yellow box"
+# !!! note "a blue box"
+# !!! danger "an orange box"
+# !!! example "a gray box"
 
 markdown_extensions:
   - extra
