@@ -13,9 +13,15 @@ still small, but growing.
 ## The Gallery
 
 !!! note "Lurch Site for Developers"
-    [<i class="fa-solid fa-check"></i> Open app](http://lurchmath.github.io/lurchmath/lurch/app/)
-    &nbsp; &nbsp; &nbsp;
-    [<i class="fa-brands fa-github"></i> Open repo](http://github.com/lurchmath/lurch/)
+    <div style="column-count: 3"><div>
+        [<i class="fa-solid fa-check"></i> Open app](http://lurchmath.github.io/lurchmath/lurch/app/)
+    </div><div>
+        [<i class="fa-brands fa-github"></i> Open repo](http://github.com/lurchmath/lurch/)
+    <!--
+    </div></div>
+        [<i class="fa-solid fa-globe"></i> Open homepage](http://lurchmath.github.io/lurch)
+    -->
+    </div></div>
 
     The development repository doubles as a Lurch Site with no contents.  Fork
     this site only if you want to start with a completely blank canvas, and you
@@ -23,11 +29,13 @@ still small, but growing.
     itself and submit pull requests back to the developers.
 
 !!! note "Example Lurch Site"
-    [<i class="fa-solid fa-globe"></i> Open homepage](http://lurchmath.github.io/example-lurch-site)
-    &nbsp; &nbsp; &nbsp;
-    [<i class="fa-solid fa-check"></i> Open app](http://lurchmath.github.io/example-lurch-site/app)
-    &nbsp; &nbsp; &nbsp;
-    [<i class="fa-brands fa-github"></i> Open repo](http://github.com/lurchmath/example-lurch-site)
+    <div style="column-count: 3"><div>
+        [<i class="fa-solid fa-check"></i> Open app](http://lurchmath.github.io/example-lurch-site/app)
+    </div><div>
+        [<i class="fa-brands fa-github"></i> Open repo](http://github.com/lurchmath/example-lurch-site)
+    </div><div>
+        [<i class="fa-solid fa-globe"></i> Open homepage](http://lurchmath.github.io/example-lurch-site)
+    </div></div>
 
     This site serves as an example of how you can create your own Lurch Sites.
     As you read the documentation for
