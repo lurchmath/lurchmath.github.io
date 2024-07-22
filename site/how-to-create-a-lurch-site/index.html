@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Nathan Carter and Ken Monks">
+        <link rel="canonical" href="https://lurchmath.github.io/how-to-create-a-lurch-site/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>How to create a Lurch Site - The Lurch Project</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-cave-light.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../css/custom.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">The Lurch Project</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../tutorial-toc/" class="nav-link">Tutorial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://lurchmath.github.io/lurch/app/" class="nav-link">Use Lurch now</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/lurchmath/lurchmath.github.io/edit/master/docs/how-to-create-a-lurch-site.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#how-to-create-a-lurch-site" class="nav-link">How to create a Lurch Site</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#see-also" class="nav-link">See also</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-1-fork-an-existing-lurch-site" class="nav-link">Step 1. Fork an existing Lurch Site</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-2-enable-web-access" class="nav-link">Step 2. Enable web access</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#optional-step-3-change-the-default-configuration" class="nav-link">Optional Step 3. Change the default configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#optional-step-4-add-mathematical-documents" class="nav-link">Optional Step 4. Add mathematical documents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#optional-step-5-addmodify-supporting-web-pages" class="nav-link">Optional Step 5. Add/modify supporting web pages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="how-to-create-a-lurch-site">How to create a Lurch Site</h1>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="../what-is-a-lurch-site/">What is a Lurch Site?</a></li>
+<li><a href="../lurch-sites-gallery/">Gallery of existing Lurch Sites</a></li>
+</ul>
+<p>To create your own Lurch site, follow the instructions below.</p>
+<h2 id="step-1-fork-an-existing-lurch-site">Step 1. Fork an existing Lurch Site</h2>
+<p>To find a site you want to fork, see our <a href="../lurch-sites-gallery/">gallery</a>.</p>
+<p>Once you have selected a site, visit its GitHub repository; you can find a link
+to that repository in the gallery.  For example, the Developer Site's repository
+is at <a href="http://github.com/lurchmath/lurch"><code>github.com/lurchmath/lurch</code></a>.</p>
+<p>If you're new to the concept of "forking" on GitHub, see
+<a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo">GitHub's forking instructions</a>.
+You simply visit the repository you're forking, click the "Fork" menu on the top
+right, choose to create a new fork, and fill out a form like the following one.</p>
+<p><img alt="Screenshot of the GitHub user interface for repository forking" src="../img/github-forking-screenshot.png" /></p>
+<p>Once you have followed those instructions, you will have your own separate copy
+of the Lurch Site that you forked, but it will not yet be visible on the web.</p>
+<h2 id="step-2-enable-web-access">Step 2. Enable web access</h2>
+<p>Until you do this, you cannot view your newly-created Lurch Site on the web.
+Here are the steps to enable web access for your Lurch Site:</p>
+<ul>
+<li>Visit the repository you just created in the previous step, probably named
+   something like <code>github.com/your-github-username/your-new-fork</code>.</li>
+<li>Click the "Settings" tab near the top of the page.</li>
+<li>Click the Pages section from the left navigation bar.</li>
+<li>Ensure that the "Source" menu has "Deploy from a branch" selected.</li>
+<li>Ensure the "Branch" settings are for "main" and "root."</li>
+<li>Click the Save button.</li>
+</ul>
+<p><img alt="Screenshot of the GitHub user interface for GitHub pages settings" src="../img/github-pages-screenshot.png" /></p>
+<ul>
+<li><em>It will take a few minutes for these changes to take effect.</em></li>
+<li>Then visit the website for your new fork, probably something like:</li>
+</ul>
+<p><code>http://your-github-username.github.io/your-new-fork/app</code></p>
+<ul>
+<li>Verify that your copy of the Lurch app is live.</li>
+</ul>
+<p><img src="../img/example-lurch-site-app-screenshot.png" class="no-img-border"
+     alt="Screenshot of the Lurch app running in an example Lurch Site"/></p>
+<h2 id="optional-step-3-change-the-default-configuration">Optional Step 3. Change the default configuration</h2>
+<p>You can do this step now, or later, or leave the configuration at its default.
+To change the configuration for your new site:</p>
+<ul>
+<li>View the <code>README.md</code> file in the <code>config/</code> folder of your forked repository.
+   It explains the various ways you can configure the app, and all the options
+   available to you.</li>
+<li>Changing the configuration will require editing one or more files in the
+   repository, which you can do in many ways.  Here are a few options; select
+   whichever of these options seems most convenient to you.  (You need only one
+   of these methods.)<ul>
+<li><strong>Recommended option:</strong>
+  Find the file you want to change in the repository on GitHub and click the
+  edit button (pencil icon) on the top right.  See the screenshot below.
+  Commit your changes when done.</li>
+<li>Press the period (".") key while viewing your repository to open an editor
+  in the browser.  Commit your changes when done.</li>
+<li>Open a GitHub Codespace from the "Code" menu on GitHub and work there.
+  Commit your changes when done.</li>
+<li>Clone the repository to your computer and make changes there, then push
+  them back to GitHub.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Screenshot of the GitHub user interface for file editing" src="../img/github-edit-screenshot.png" /></p>
+<h2 id="optional-step-4-add-mathematical-documents">Optional Step 4. Add mathematical documents</h2>
+<p>You will almost surely want to add your own mathematical documents to your site
+at some point, but it is not necessary to do so immediately.</p>
+<p>The instructions below assume that you have already written some mathematical
+documents.  Perhaps you did so using the Lurch app in your new site or another
+Lurch Site or perhaps you copied the files from elsewhere (with the author's
+permission, of course).</p>
+<p>Choose whichever of the following methods you prefer to upload your Lurch files
+into the <code>math/</code> folder of your Lurch Site's repository.  (You need to choose
+only one of these methods.)</p>
+<ul>
+<li><strong>Recommended option:</strong>
+   View the <code>math/</code> folder in the repository, and click "Add file" in the top
+   right, and choose "Upload files."</li>
+</ul>
+<p><img alt="Screenshot of the GitHub user interface for adding files" src="../img/github-add-file-screenshot.png" /></p>
+<ul>
+<li>If you have the repository opened in a GitHub Codespace, you can drag the
+   files into the editor's file browser (the left hand site).  Commit your
+   changes.</li>
+<li>If you cloned the repository to your computer, just add the files to your
+   local copy, commit them, and push them to GitHub.</li>
+</ul>
+<p>You may wish to verify that the files you uploaded can accessed from your Lurch
+Site's copy of the Lurch app.  You can do so in two different ways:</p>
+<h3 id="method-1-using-file-open">Method 1: Using File &gt; Open</h3>
+<ul>
+<li>Visit the Lurch app in your Lurch Site.</li>
+<li>Click the File &gt; Open menu item.</li>
+<li>In the dialog that appears, select "From the web."</li>
+<li>Enter the URL to one of the files you uploaded, in the following form:</li>
+</ul>
+<p><code>http://your-github-username.github.io/your-new-fork/math/your-file-name.lurch</code></p>
+<ul>
+<li>Verify that it opens successfully in the Lurch app.</li>
+</ul>
+<h3 id="method-2-using-a-direct-link">Method 2: Using a direct link</h3>
+<p>This method is useful because it allows you to create a single URL that opens a
+file you've written directly in the Lurch app in your Lurch Site.  This can be
+useful for sharing with students, for example, to open a homework assignment in
+one click.</p>
+<p>Let's assume you have a file named <code>homework-1.lurch</code> in the <code>math/</code> folder of
+your Lurch Site repository.  Build a URL as follows, and visit it in your
+browser:</p>
+<p><code>http://your-github-username.github.io/your-new-fork/app/index.html?load=/math/homework-1.lurch</code></p>
+<h2 id="optional-step-5-addmodify-supporting-web-pages">Optional Step 5. Add/modify supporting web pages</h2>
+<p>Right now, if users try to visit
+<code>http://your-github-username.github.io/your-new-fork</code>, they will get one of two
+results:</p>
+<ul>
+<li>If you forked a Lurch Site that had no landing page, the visitor will get a
+   "not found" error.</li>
+<li>If you forked a Lurch Site that had a landing page, the visitor will see the
+   landing page from the original Lurch Site that you forked.</li>
+</ul>
+<p>You may wish to create your own landing page, and possibly additional pages,
+perhaps with information about a course you're teaching, or a list of Lurch
+documents in your repository.  We provide an Example Lurch Site that you may
+wish to imitate.  (See link below.)</p>
+<p>Feel free to fill the root folder of your Lurch Site's repository with as many
+HTML files as you like.  The one named <code>index.html</code> is the default landing page
+and can link to as many others as you wish to create.</p>
+<p>If you want any of those pages to link directly to one of the Lurch documents in
+your repository's <code>math/</code> folder, opening it in your Lurch Site's copy of the
+Lurch app, use the method in the previous section for building a URL that does
+exactly that.  You can also imitate the links you'll find in the landing page
+for the Example Lurch Site.</p>
+<ul>
+<li><a href="http://lurchmath.github.io/example-lurch-site">View that landing page here</a></li>
+<li><a href="http://github.com/lurchmath/example-lurch-site/tree/main/index.html">View its source code here</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/lurchmath/lurchmath@master/embedded.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
