@@ -13,9 +13,9 @@ Then we can surely conclude (drum roll) that `x < 0`!
 
 In mathematics, most facts are not proven in isolation, but only after making
 certain *assumptions.*  A theorem will say, "If such-and-such a fact, then we
-know that some other facts."  This is why in a geometry class, many textbooks
-let a student justify a line in a proof with the word "given."  Lurch has
-support for this essential piece of mathematical reasoning.
+know some other facts."  This is why in a geometry class, many textbooks let a
+student justify a line in a proof with the word "given."  Lurch has support for
+this essential piece of mathematical reasoning.
 
 ## The user interface for assumptions
 
@@ -33,10 +33,10 @@ introduced at the end of [an earlier tutorial](tut-03-meaningful-math.md).)
    many other options on that drop-down that we will come to in later tutorial
    pages.)
  * **In advanced mode,** you must include in the input you provide a word that
-   signals that the content is an assumption.  For isntance, instead of typing
+   signals that the content is an assumption.  For instance, instead of typing
    `x<0` into the dialog box, you can type `Assume x<0`.  For a full list of the
    words that signal "assumption," see the
-   [Lurch notation reference page](lurch-notation.md).
+   [Lurch Notation reference page](lurch-notation.md).
 
 ## Feedback about assumptions
 
@@ -82,12 +82,14 @@ free to rely on the unjustified one.**  Thus a proof with even one unjustified
 statement is not a complete proof, even if all the statements but one have green
 check marks on them.
 
+## Why is Lurch so nice?
+
 We chose to have Lurch behave this way because it permits students to assemble a
 proof in any order.  For example, many instructors teach students to work "from
 the outside in," building some of the starting lines and some of the concluding
 lines for a proof, before filling in one or two insightful steps in the middle
-that connects it all together.  For example, we will later see examples of
-proofs like the following, and Lurch will grade most of the work as correct.
+that connect it all together.  For example, we will later see examples of proofs
+like the following, and Lurch will grade most of the work as correct.
 
 !!! example
 

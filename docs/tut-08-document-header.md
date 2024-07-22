@@ -1,6 +1,12 @@
 
 # Hiding and showing rules
 
+!!! danger "Outdated tutorial page"
+
+    This tutorial page covers the document header, which has changed in recent
+    updates to the Lurch app.  The following content is slightly out-of-date,
+    and will be updated soon.
+
 <div class='lurch-embed' width='100%' height='300px' validate='true'>
 {
     "menuData" : {

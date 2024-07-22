@@ -17,9 +17,10 @@ explicitly called "expository."
 
 ## Why two types of math?
 
-Students will almost always want to use meaningful math only, so that Lurch
-will read and grade all of their work.  But instructors may want to enter
-a mix of meaningful and expository math.
+Students will almost always want to use meaningful math, so that Lurch will read
+and grade all of their work.  But instructors may want to enter a mix of
+meaningful and expository math, and students who want to add exposition to their
+proofs may do so as well.
 
 For example, if an instructor is defining a new set of axioms, and they want to
 intersperse examples that explain the axioms, they don't want Lurch to
@@ -44,18 +45,16 @@ cursor on it and hit enter.
 
 !!! danger "Important: Recognizing meaningful content"
 
-    You have surely noticed that the expression you just added is surrounded in
-    a blue-ish border.  **This border distinguishes meaningful content from
-    non-meaningful content, and makes it clear which portions of your document
-    Lurch is paying attention to.**  We'll talk more about this decoration (and
-    how to hide it when you don't want to see it) in later parts of this
-    tutorial.
+    You may have noticed that the expression you just added is in an orange
+    font.  **This color distinguishes meaningful content from non-meaningful
+    content, and makes it clear which expressions in your document Lurch is
+    paying attention to.**  We'll talk more about this (and how to hide it when
+    you don't want to see it) in later parts of this tutorial series.
 
-## For power users
+## Lurch Notation
 
 Just as expository math expressions can be entered using an equation editor *or*
 LaTeX notation, meaningful mathematics can also be entered in more than one way.
-(Again, users happy with the equation editor can skip this section.)
 
 !!! note "Exercise: Change the input mode"
 
@@ -68,7 +67,7 @@ LaTeX notation, meaningful mathematics can also be entered in more than one way.
 Much like intermediate mode for editing expository math content allows you to
 use the equation editor or LaTeX notation, the intermediate mode for editing
 meaningful math expressions allows you to use the equation editor or *a custom
-Lurch notation for meaningful expressions.*
+Lurch Notation for meaningful expressions.*
 
 !!! warning "Warning: This is not LaTeX"
 
@@ -79,13 +78,13 @@ Lurch notation for meaningful expressions.*
     not.  [You can read more about the Lurch notation here.](lurch-notation.md)
     Or you can choose to use the equation editor instead.
 
-Like with expository math, meaningful math has three editor modes, and you can
+Like expository math, meaningful math has three editor modes, and you can
 choose the one you like best:
 
  - **Beginner mode** is the default mode and uses just an equation editor widget.
  - **Intermediate mode** incorporates both the equation editor for those who
-   wish to use it and a text box that uses [Lurch notation](lurch-notation.md).
- - **Advanced mode** is for those who have mastered Lurch notation, and shows a
+   wish to use it and a text box that uses [Lurch Notation](lurch-notation.md).
+ - **Advanced mode** is for those who have mastered Lurch Notation, and shows a
    very minimalist dialog that aims to let you stay in the flow of your work.
 
 ## Is lurch grading my math *now?*

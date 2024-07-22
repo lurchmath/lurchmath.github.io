@@ -17,7 +17,7 @@ or $10$.
 
 If you want it to know how those symbols operate, you have to load in a
 mathematical library that defines them.  Then those symbols will behave in the
-expected way.  (Depending, of course, on which mathematical definitions appear
+expected way.  (Of course, that depends on which mathematical definitions appear
 in the library you load!)
 
 ## Add meaning with rules
@@ -26,10 +26,11 @@ In order for Lurch to permit new inferences that don't hold by default, we must
 give it new facts.  These come in the form of new **Rules** or **Axioms.**  In
 practice, a rule and an axiom behave exactly the same in Lurch, but typically
 if you're building a logical system, you form it out of "rules," and if you're
-building a mathematical theory, you form it out of "axioms."  You can use
-whichever word you prefer; they behave the same way.
+building a mathematical theory, you form it out of "axioms."  But in Lurch
+documents, we will always use the word "rule" for new facts that Lurch should
+accept as valid.
 
-Let's take the document above and some facts that will help us get the
+Let's take the document above and add some facts that will help us get the
 conclusion we're hoping for.
 
 <div class='lurch-embed' width='100%' height='500px' validate='true'>
@@ -38,9 +39,9 @@ The less than operation is transitive.  Specifically, if we
 `assume a < b` and we `assume b < c` then we can conclude `a < c`.
 </rule>
 
-<axiom>
+<rule>
 `0 < 10`
-</axiom>
+</rule>
 
 Now we should be able to get the conclusion we want:
 
@@ -49,8 +50,8 @@ If we `assume x < 0` then we can conclude that `x < 10`.
 
 ## Checking your reasoning with rules
 
-Notice that rules and axioms do not get checked.  You can make *whatever you
-like* into a rule or axiom, and Lurch will not argue with you.
+Notice that rules in Lurch do not get checked.  You can make *whatever you
+like* into a rule, and Lurch will not argue with you.
 
 !!! note "Exercise: Even more transitive"
 

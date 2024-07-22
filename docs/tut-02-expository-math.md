@@ -12,8 +12,6 @@ simpler method.
        "Expository math."
     2. In the dialog that pops up, enter some math using the equation editor.
        For example, you might type `1-x^2` and watch it become $1-x^2$.
-       (If you want a math keyboard, open one by clicking the keyboard icon
-       in the equation editor.)
     3. Click OK to place your math into the document.
 
 <div class='lurch-embed' width='100%' height='300px'>
@@ -30,7 +28,14 @@ To later edit your new mathematical expression, you can either
 Both options open the same dialog box you had when adding the math, but now for
 editing it instead.
 
-## For power users
+## Is Lurch grading my math?
+
+Not yet!  We're just getting started.
+[Let's learn how to input *meaningful* math.](tut-03-meaningful-math.md)
+
+---
+
+## Optional: LaTeX
 
 Users familiar with LaTeX may want to use that notation instead of an equation
 editor.  (Other users can skip this section.)  We have a setting that lets you
@@ -55,12 +60,9 @@ wants to do so.
     2. Find the setting for "Type of expository math editor to use" and change
        it to "Intermediate."
     3. Click OK to save your settings.
-    4. Repeat the exercise above to try out the new intermediate-mode editor for
-       expository math content.
-    5. Try this exercise again, but use Advanced mode, then switch the setting
-       to the one you like best.
+    4. Repeat the exercise at the top of this page to try out the new
+       intermediate-mode editor you just enabled for expository math content.
+    5. Try this exercise again, but use Advanced mode.
+    6. Once you've tried them all, switch the setting to the one prefer.
 
-## Is Lurch grading my math?
-
-Not yet!  We're just getting started.
-[Let's learn how to input *meaningful* math.](tut-03-meaningful-math.md)
+See the link above the line to proceed to the next tutorial.

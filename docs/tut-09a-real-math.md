@@ -1,7 +1,13 @@
 
 # Real mathematics, part 1
 
-## Well, okay, propositional logic, but real proofs!
+!!! danger "Outdated tutorial page"
+
+    This tutorial page covers the document header, which has changed in recent
+    updates to the Lurch app.  The following content is slightly out-of-date,
+    and will be updated soon.
+
+## Okay, it's just propositional logic, but they're real proofs
 
 One of the early topics in some introduction to proof courses is logic, often
 starting with propositional logic.  You may have noticed the example proof below

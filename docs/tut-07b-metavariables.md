@@ -1,17 +1,18 @@
 
 # How substitution works in Lurch
 
-!!! warning "Warning: Fiddly details of interest to instructors"
+!!! warning "Warning: Fiddly details of interest to rule authors"
 
     This page of the tutorial is a bit of a rabbit trail into some subtleties of
     how Lurch functions, but should be of interest to anyone who wants to define
     a new mathematical system in Lurch from the ground up.
 
-    We aim to provide several such systems pre-built for users eventually, but
-    for those who are interested in developing Lurch or getting in on alpha
-    testing, this content is relevant.
+    We aim to provide several such systems pre-built for users eventually, and
+    some appear already in our [gallery](lurch-sites-gallery.md), but for those
+    who are interested in writing their own mathematical systems, this content
+    is relevant.
 
-    **In particular, no student should need to read this page!**
+    **In particular, no student needs to read this page.**  (But they can!)
 
 ## We know where to substitute, and where not to
 
@@ -31,7 +32,7 @@ $\alpha=a$, $\beta=a$, $\gamma=b$.
 
 But it's understood that the *only* symbols you're allowed to substitute in for
 are $\alpha$, $\beta$, and $\gamma$.  That is, the $\pi$ (despite being another
-lower-case Greek letter) is not available for substitution--you can't have the
+lower-case Greek letter) is not available for substitution.  You can't have the
 sum of the triangle's angles equal to whatever you want!  Perhaps more subtly,
 the $+$ and $=$ are other mathematical symbols, and we're not allowed to
 substitute for them, either.  Otherwise, the theorem above would begin to say
@@ -46,7 +47,7 @@ the ones you can replace.
 More importantly, how is software like Lurch to make the decision, since it does
 not have human intuition to guide it?
 
-## What is a metavariable?
+## Metavariables
 
 In logic, we use the term *metavariable* to mean a symbol in a metalanguage that
 can be replaced by any expression in an object language.  Since Lurch is a piece
@@ -83,7 +84,7 @@ inference in the document below.
 </rule>
 
 Now `assume X` and `assume Y`, and we will use the above rule twice, once to
-conclude `X and Y` and once to conclude `X - Y`.  Oh no!
+conclude `X and Y` and once to conclude `X+Y`.  Oh no!
 </div>
 
 What went wrong?  Recall that this Lurch document has not imported *any*
@@ -116,3 +117,9 @@ Now `assume X` and `assume Y`, and we can still use that rule to conclude
 
 **In short:  Lurch treates *every* symbol as a metavariable, unless you
 explicitly "declare" it first.**
+
+## Off the rabbit trail
+
+If you got to this page from [the rules page of the tutorial](tut-07-rules.md),
+you probably want to go back to
+[the next page in the tutorial](tut-08-document-header.md).
