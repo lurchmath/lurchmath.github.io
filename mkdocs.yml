@@ -30,6 +30,9 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+extra_css:
+  - css/custom.css
+
 validation:
   nav:
     omitted_files: ignore # Some files are left out of nav and that's okay

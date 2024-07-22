@@ -1,0 +1,7 @@
+
+.container img:not(.no-img-border) {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #4aa48a;
+    border-radius: 0.4rem;
+}
