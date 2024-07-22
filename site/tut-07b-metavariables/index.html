@@ -82,7 +82,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#what-is-a-metavariable" class="nav-link">What is a metavariable?</a>
+            <li class="nav-item" data-bs-level="2"><a href="#metavariables" class="nav-link">Metavariables</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -91,6 +91,10 @@
               </ul>
             </li>
             <li class="nav-item" data-bs-level="2"><a href="#doing-it-the-right-way" class="nav-link">Doing it the right way</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#off-the-rabbit-trail" class="nav-link">Off the rabbit trail</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -103,14 +107,15 @@
 
 <h1 id="how-substitution-works-in-lurch">How substitution works in Lurch</h1>
 <div class="admonition warning">
-<p class="admonition-title">Warning: Fiddly details of interest to instructors</p>
+<p class="admonition-title">Warning: Fiddly details of interest to rule authors</p>
 <p>This page of the tutorial is a bit of a rabbit trail into some subtleties of
 how Lurch functions, but should be of interest to anyone who wants to define
 a new mathematical system in Lurch from the ground up.</p>
-<p>We aim to provide several such systems pre-built for users eventually, but
-for those who are interested in developing Lurch or getting in on alpha
-testing, this content is relevant.</p>
-<p><strong>In particular, no student should need to read this page!</strong></p>
+<p>We aim to provide several such systems pre-built for users eventually, and
+some appear already in our <a href="../lurch-sites-gallery/">gallery</a>, but for those
+who are interested in writing their own mathematical systems, this content
+is relevant.</p>
+<p><strong>In particular, no student needs to read this page.</strong>  (But they can!)</p>
 </div>
 <h2 id="we-know-where-to-substitute-and-where-not-to">We know where to substitute, and where not to</h2>
 <p>Mathematicians and our students develop a sense for which parts of a theorem or
@@ -127,7 +132,7 @@ conclude that <span class="arithmatex">\(a+a+b=\pi\)</span>, because we used the
 <span class="arithmatex">\(\alpha=a\)</span>, <span class="arithmatex">\(\beta=a\)</span>, <span class="arithmatex">\(\gamma=b\)</span>.</p>
 <p>But it's understood that the <em>only</em> symbols you're allowed to substitute in for
 are <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, and <span class="arithmatex">\(\gamma\)</span>.  That is, the <span class="arithmatex">\(\pi\)</span> (despite being another
-lower-case Greek letter) is not available for substitution--you can't have the
+lower-case Greek letter) is not available for substitution.  You can't have the
 sum of the triangle's angles equal to whatever you want!  Perhaps more subtly,
 the <span class="arithmatex">\(+\)</span> and <span class="arithmatex">\(=\)</span> are other mathematical symbols, and we're not allowed to
 substitute for them, either.  Otherwise, the theorem above would begin to say
@@ -139,7 +144,7 @@ theorem, so nobody explicitly told us that <span class="arithmatex">\(\alpha\)</
 the ones you can replace.</p>
 <p>More importantly, how is software like Lurch to make the decision, since it does
 not have human intuition to guide it?</p>
-<h2 id="what-is-a-metavariable">What is a metavariable?</h2>
+<h2 id="metavariables">Metavariables</h2>
 <p>In logic, we use the term <em>metavariable</em> to mean a symbol in a metalanguage that
 can be replaced by any expression in an object language.  Since Lurch is a piece
 of software in which you can design and use many different logical systems, the
@@ -170,7 +175,7 @@ inference in the document below.</p>
 </rule>
 
 Now `assume X` and `assume Y`, and we will use the above rule twice, once to
-conclude `X and Y` and once to conclude `X - Y`.  Oh no!
+conclude `X and Y` and once to conclude `X+Y`.  Oh no!
 </div>
 
 <p>What went wrong?  Recall that this Lurch document has not imported <em>any</em>
@@ -198,7 +203,11 @@ Now `assume X` and `assume Y`, and we can still use that rule to conclude
 </div>
 
 <p><strong>In short:  Lurch treates <em>every</em> symbol as a metavariable, unless you
-explicitly "declare" it first.</strong></p></div>
+explicitly "declare" it first.</strong></p>
+<h2 id="off-the-rabbit-trail">Off the rabbit trail</h2>
+<p>If you got to this page from <a href="../tut-07-rules/">the rules page of the tutorial</a>,
+you probably want to go back to
+<a href="../tut-08-document-header/">the next page in the tutorial</a>.</p></div>
             </div>
         </div>
 

@@ -86,7 +86,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#too-many-blue-borders" class="nav-link">Too many blue borders?</a>
+            <li class="nav-item" data-bs-level="2"><a href="#too-many-colors" class="nav-link">Too many colors?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -124,12 +124,12 @@ so the theorem is proven.
 </proof>
 </div>
 
-<p>Environments are shown, by default, with blue borders around them, just like
-expressions are, to indicate that they are meaningful portions of the document
-that Lurch is paying attention to when grading your work.  For example, in the
-small document above, you can see that not only does the final expression in the
-proof get a green check mark, but the proof as a whole gets a green check mark,
-as does the corresponding theorem.  That's because Lurch knows what those
+<p>Environments are shown, by default, with blue borders and shadows, to indicate
+that they are meaningful (and important) portions of the document.  Lurch pays
+attention to environments when grading your work.  For example, in the small
+document above, you can see that not only does the final expression in the proof
+get a green check mark, but the proof as a whole gets a green check mark, as
+does the corresponding theorem.  That's because Lurch knows what those
 environments mean, and that they should be checked as part of its grading
 process.</p>
 <div class="admonition note">
@@ -160,6 +160,8 @@ while editing a document, including these:</p>
 <ul>
 <li>If you right-click an environment (not one of its inner expressions!) you can
    change which type of environment it is (e.g., from Theorem to Lemma).</li>
+<li>From that same menu, you can also delete the environment, letting its
+   contents spill out into the rest of the document.</li>
 <li>If your cursor is at the start of an environment and you press Backspace, it
    merges it with the paragraph before.  (This typically deletes the environment,
    unless the previous paragraph was empty.)</li>
@@ -172,22 +174,21 @@ while editing a document, including these:</p>
    pressing enter while your cursor is inside it.  If you instead intended to
    add a paragraph outside the environment, see the previous bullet point.</li>
 </ul>
-<h2 id="too-many-blue-borders">Too many blue borders?</h2>
+<h2 id="too-many-colors">Too many colors?</h2>
 <p>As you can see in the document above, we're starting to get a lot of blue
-borders around content in the document.  On the one hand, this is great, because
-we know exactly which portions of our document Lurch is paying attention to.
-But on the other hand, it can be distracting, and it's not how math documents
-typically look.</p>
-<p>This is because you are currently in "editing mode," where the user usually
-wants to see the blue borders, so that they can be aware of how their work is
-being interpreted.  But in "presentation mode," those borders are hidden, so
-that the document is more easily readable by a human.</p>
+borders and orange fonts in the document.  On the one hand, this is great,
+because we know exactly which portions of our document Lurch is paying attention
+to.  But on the other hand, it can be distracting, and it's not how math
+documents typically look.</p>
+<p>This colorful style is useful while editing the document, so that you can be
+aware of how your work is being interpreted.  But you can switch to a simpler
+visual style so that the document is more easily readable by a human.</p>
 <div class="admonition note">
-<p class="admonition-title">Exercise: Switch modes</p>
-<p>Toggle between editing mode and presentation mode using the relevant item on
-the Document menu.  Also try using the corresponding keyboard shortcut
-(Ctrl+0 on PC, Command+0 on Mac).  Note that the shortcut uses a zero, <em>not</em>
-a capital "oh."</p>
+<p class="admonition-title">Exercise: Hide meaning</p>
+<p>Toggle between showing and hiding meaning using the relevant item on the
+Document menu ("Show/hide meaning").  Also try using the corresponding
+keyboard shortcut (Alt+0).  Note that the shortcut uses a zero, not a
+capital "oh."</p>
 </div>
 <h2 id="more-environments">More environments</h2>
 <p>If you right-click an environment and choose "Change environment type," you may

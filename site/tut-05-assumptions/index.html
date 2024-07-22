@@ -90,6 +90,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#why-is-lurch-so-nice" class="nav-link">Why is Lurch so nice?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#speaking-of-proofs" class="nav-link">Speaking of proofs...</a>
               <ul class="nav flex-column">
               </ul>
@@ -113,9 +117,9 @@ Then we can surely conclude (drum roll) that `x < 0`!
 
 <p>In mathematics, most facts are not proven in isolation, but only after making
 certain <em>assumptions.</em>  A theorem will say, "If such-and-such a fact, then we
-know that some other facts."  This is why in a geometry class, many textbooks
-let a student justify a line in a proof with the word "given."  Lurch has
-support for this essential piece of mathematical reasoning.</p>
+know some other facts."  This is why in a geometry class, many textbooks let a
+student justify a line in a proof with the word "given."  Lurch has support for
+this essential piece of mathematical reasoning.</p>
 <h2 id="the-user-interface-for-assumptions">The user interface for assumptions</h2>
 <p>To make an expression into an assumption, you use a different technique
 depending on which editing mode you prefer.  (Recall the three editing modes
@@ -131,10 +135,10 @@ introduced at the end of <a href="../tut-03-meaningful-math/">an earlier tutoria
    many other options on that drop-down that we will come to in later tutorial
    pages.)</li>
 <li><strong>In advanced mode,</strong> you must include in the input you provide a word that
-   signals that the content is an assumption.  For isntance, instead of typing
+   signals that the content is an assumption.  For instance, instead of typing
    <code>x&lt;0</code> into the dialog box, you can type <code>Assume x&lt;0</code>.  For a full list of the
    words that signal "assumption," see the
-   <a href="../lurch-notation/">Lurch notation reference page</a>.</li>
+   <a href="../lurch-notation/">Lurch Notation reference page</a>.</li>
 </ul>
 <h2 id="feedback-about-assumptions">Feedback about assumptions</h2>
 <p>Lurch checks your reasoning to see if any of the steps in it are invalid.  But
@@ -176,12 +180,13 @@ sufficiently justified, Lurch marks it as such, but later statements are still
 free to rely on the unjustified one.</strong>  Thus a proof with even one unjustified
 statement is not a complete proof, even if all the statements but one have green
 check marks on them.</p>
+<h2 id="why-is-lurch-so-nice">Why is Lurch so nice?</h2>
 <p>We chose to have Lurch behave this way because it permits students to assemble a
 proof in any order.  For example, many instructors teach students to work "from
 the outside in," building some of the starting lines and some of the concluding
 lines for a proof, before filling in one or two insightful steps in the middle
-that connects it all together.  For example, we will later see examples of
-proofs like the following, and Lurch will grade most of the work as correct.</p>
+that connect it all together.  For example, we will later see examples of proofs
+like the following, and Lurch will grade most of the work as correct.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Let <span class="arithmatex">\(x\)</span> be arbitrary, then assume <span class="arithmatex">\(x&gt;0\)</span>.  Consequenly, <span class="arithmatex">\(x^2+1&gt;0\)</span>.</p>
