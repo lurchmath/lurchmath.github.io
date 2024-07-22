@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://lurchmath.github.io/how-to-toc/</loc>
+         <lastmod>2024-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://lurchmath.github.io/lurch-notation/</loc>
          <lastmod>2024-07-22</lastmod>
          <changefreq>daily</changefreq>
@@ -27,6 +32,11 @@
     </url>
     <url>
          <loc>https://lurchmath.github.io/old-versions/</loc>
+         <lastmod>2024-07-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://lurchmath.github.io/reference-toc/</loc>
          <lastmod>2024-07-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
