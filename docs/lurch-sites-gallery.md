@@ -22,4 +22,18 @@ still small, but growing.
     want all developer tools installed so that you could modify the software
     itself and submit pull requests back to the developers.
 
+!!! note "Example Lurch Site"
+    [<i class="fa-solid fa-globe"></i> Open homepage](http://lurchmath.github.io/example-lurch-site)
+    &nbsp; &nbsp; &nbsp;
+    [<i class="fa-solid fa-check"></i> Open app](http://lurchmath.github.io/example-lurch-site/app)
+    &nbsp; &nbsp; &nbsp;
+    [<i class="fa-brands fa-github"></i> Open repo](http://github.com/lurchmath/example-lurch-site)
+
+    This site serves as an example of how you can create your own Lurch Sites.
+    As you read the documentation for
+    [how to make a Lurch Site](how-to-create-a-lurch-site.md), you can compare
+    what you read there to this example.  Its
+    [homepage](http://lurchmath.github.io/example-lurch-site) shows how to
+    customize some of its contents to suit your needs.
+
 More coming soon!
