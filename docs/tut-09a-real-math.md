@@ -10,8 +10,8 @@
 ## Okay, it's just propositional logic, but they're real proofs
 
 One of the early topics in some introduction to proof courses is logic, often
-starting with propositional logic.  You may have noticed the example proof below
-(in propositional logic) on [the documentation home page](index.md).
+starting with propositional logic.  Consider the example propositional logic
+proof below.
 
 <div class='lurch-embed' width='100%' height='500px' validate='true'>
 {
