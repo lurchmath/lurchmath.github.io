@@ -92,7 +92,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#status" class="nav-link">Status</a>
+            <li class="nav-item" data-bs-level="2"><a href="#example-proof-in-lurch" class="nav-link">Example proof in Lurch</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lurch-also-finds-mistakes" class="nav-link">Lurch also finds mistakes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -126,96 +130,21 @@ features, and new documentation arrive regularly.</p>
 <p><a href="reference-toc/">References</a></p>
 </div>
 </div>
-<h2 id="status">Status</h2>
-<p>The latest version of Lurch is a web application that is in alpha testing at the
-moment.  <a href="http://lurchmath.github.io/lurchmath">You can try it online here!</a>
-A simple example proof in propositional logic is shown below.</p>
-<div class='lurch-embed' width='100%' height='500px' validate='true'>
-
-<div class='header'>
-We tell Lurch which symbols our mathematical system requires like this:
-`Declare and, or, implies, not`.
-
-<rule>
-**Conjunction introduction:**
-`If A` and `if B` then we can conclude `A and B`.
-</rule>
-
-<rule>
-**Conjunction elimination:**
-`If A and B` then we can conclude `A` and separately conclude `B`.
-</rule>
-
-<rule>
-**Disjunction introduction:**
-`If A` then we can conclude `A or B`, conclude `B or A`, or even both.
-</rule>
-
-<rule>
-**Disjunction elimination:**
-
-<subproof>
-(Version 1)  `If A or B` and `not A` then it must be `B`.
-</subproof>
-<subproof>
-(Version 2)  `If A or B` and `not B` then it must be `A`.
-</subproof>
-</rule>
-
-<rule>
-**Conditional introduction:**
-
-To prove a conditional, we must construct a subproof of the following form.
-<premise>
-`Assume A`.  Then, typically after some work, prove `B`.
-</premise>
-From that subproof, we can conclude `A implies B`.
-</rule>
-
-<rule>
-**Conditional elimination:**
-
-`If A implies B` and `if A`, then we can conclude `B`.
-</rule>
-
-<rule>
-**Negation introduction:**
-
-<premise>
-If we start a subproof with "`assume A`" and we end it with a contradiction,
-say `B` and `not B`, then we can end the subproof...
-</premise>
-...and conclude `not A`.
-</rule>
-
-<rule>
-**Negation elimination:**
-
-<premise>
-If we start a subproof with "`assume not A`" and we end it with a contradiction,
-say `B` and `not B`, then we can end the subproof...
-</premise>
-...and conclude `A`.
-</rule>
-</div>
-
-<theorem>
-**Contrapositive:** `If X implies Y` then `not Y implies not X`.
-</theorem>
-<proof>
-`Assume X implies Y`.  To establish the contrapositive, we must use a subproof.
-<subproof>
-`Assume not Y`.  The easiest way to show $\neg X$ is with an inner subproof.
-<subproof>
-`Assume X`.  Then we can apply the original assumption to conclude `Y`, but we
-already know that `not Y` is true.  That's a contradiction.
-</subproof>
-So outside that inner subproof, we can conclude `not X`.
-</subproof>
-Since we assumed $\neg Y$ and proved $\neg X$ from it, we can conclude
-`not Y implies not X`.
-</proof>
-</div></div>
+<h2 id="example-proof-in-lurch">Example proof in Lurch</h2>
+<p>The green check marks show that Lurch has graded each step of this work correct.
+Not shown in the picture are all the definitions of functions, sets, and
+topological spaces preceding the theorem and proof.</p>
+<p><img alt="Screenshot of a proof in point-set topology, graded by Lurch" src="img/topology-proof-screenshot.png" /></p>
+<h2 id="lurch-also-finds-mistakes">Lurch also finds mistakes</h2>
+<p>The following shows a proof with intentional mistakes added, to showcase Lurch's
+ability to detect them.  The yellow "?" and red "X" are part of Lurch's
+feedback, while the red text hovering over the document has been added for the
+purposes of explaining on this website why Lurch gave the marks it gave.</p>
+<p><img alt="Screenshot of a proof containing two mistakes, graded by Lurch" src="img/proof-with-mistakes-screenshot.png" /></p>
+<p>In the application, if the user hovers their mouse over the yellow "?" they will
+get a message saying, "You have not yet convinced me of this."  If they hover
+their mouse over the red "X" they will get a message saying, "But you have
+already used j."</p></div>
             </div>
         </div>
 
@@ -301,5 +230,5 @@ Since we assumed $\neg Y$ and proved $\neg X$ from it, we can conclude
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2024-07-22 21:55:20.502801+00:00
+Build Date UTC : 2024-07-23 17:26:58.218268+00:00
 -->
