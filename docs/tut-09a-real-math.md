@@ -18,7 +18,7 @@ proof below.
     "menuData" : {
         "document" : {
             "title" : "Document",
-            "items" : "editheader | validate clearvalidation | docsettings temptoggle"
+            "items" : "togglemeaning validate | docsettings"
         }
     }
 }
