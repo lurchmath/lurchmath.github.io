@@ -12,6 +12,20 @@ still small, but growing.
 
 ## The Gallery
 
+!!! note "Minimal Lurch Site"
+    <div style="column-count: 3"><div>
+        [<i class="fa-solid fa-check"></i> Open app](http://lurchmath.github.io/lurchmath/minimal-lurch-site/app/)
+    </div><div>
+        [<i class="fa-brands fa-github"></i> Open repo](http://github.com/lurchmath/minimal-lurch-site/)
+    <!--
+    </div></div>
+        [<i class="fa-solid fa-globe"></i> Open homepage](http://lurchmath.github.io/lurch)
+    -->
+    </div></div>
+
+    A Lurch Site with no contents and no developer tools.  Fork this site only
+    if you want to start with a completely blank canvas.
+
 !!! note "Lurch Site for Developers"
     <div style="column-count: 3"><div>
         [<i class="fa-solid fa-check"></i> Open app](http://lurchmath.github.io/lurchmath/lurch/app/)
