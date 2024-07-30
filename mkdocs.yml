@@ -10,6 +10,7 @@ site_author: Nathan Carter and Ken Monks
 nav:
   - Home: index.md
   - About: about.md
+  - Gallery: lurch-sites-gallery.md
 
 theme:
   name: minty
