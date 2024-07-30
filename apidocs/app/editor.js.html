@@ -116,6 +116,20 @@ window.Lurch = {
      *  - `options.menuData` will be used to override default menus.  The format
      *    is the same as it is for {@link https://www.tiny.cloud/docs/tinymce/latest/menus-configuration-options/#menu
      *    TinyMCE menu specifications}.
+     *  - `options.menuItems` will be used to override the attributes of the
+     *    menu items that Lurch adds to TinyMCE.  (This does not apply to
+     *    built-in TinyMCE menu items, like headings and undo and so forth, only
+     *    to Lurch menu items like inserting math or environments, showing
+     *    feedback, etc.)  The format is a mapping from internal menu item names
+     *    (e.g., `"expositorymath"`) to an object containing attributes to
+     *    override.  For example, to change the text of the `"expositorymath"`
+     *    menu item from "Expository math" to "LaTeX", use the code
+     *    `"menuItems": { "expositorymath": { text: "LaTeX" } }`.  All other
+     *    menu item attributes are also available, including `"text"`, `"icon"`,
+     *    `"shortcut"`, and `"tooltip"`.  Even the menu item's action can be
+     *    overridden in this way by specifying `"onAction": myFunction`, except
+     *    when loading these options from a configuration file in JSON format,
+     *    because that format does not support functions.
      *  - `options.toolbarData` will be used to override default toolbars.  The
      *    format is the same as it is for {@link https://www.tiny.cloud/docs/tinymce/latest/toolbar-configuration-options/#toolbar
      *    TinyMCE toolbar specifications}.
@@ -137,13 +151,18 @@ window.Lurch = {
      *  - `options.fileOpenTabs` can be used to reorder or subset the list of
      *    tabs in the File > Open dialog box, which defaults to
      *    `[ 'From in-browser storage', 'From your computer', 'From the web',
-     *    'From Dropbox' ]`.
+     *    'From Dropbox', 'From my course' ]`.  Each of these corresponds to a
+     *    subclass of the {@link FileSystem} class, and those are (respectively)
+     *    {@link BrowserFileSystem}, {@link OfflineFileSystem},
+     *    {@link WebFileSystem}, and {@link MyCourseFileSystem}.
      *  - `options.fileSaveTabs` can be used to reorder or subset the list of
      *    tabs in the File > Save dialog box, which defaults to
-     *    `[ 'To in-browser storage', 'To your computer', 'To Dropbox' ]`.
+     *    `[ 'To in-browser storage', 'To your computer', 'To Dropbox' ]`.  See
+     *    above for documentation on the relevant {@link FileSystem} subclasses.
      *  - `options.fileDeleteTabs` can be used to reorder or subset the list of
      *    tabs in the File > Delete dialog box, which defaults to
-     *    `[ 'In in-browser storage', 'In Dropbox' ]`.
+     *    `[ 'In in-browser storage', 'In Dropbox' ]`.  See above for
+     *    documentation on the relevant {@link FileSystem} subclasses.
      *  - `options.helpPages` can be an array of objects of the form
      *    `{ title : '...', url : '...' }`.  These will be displayed in the help
      *    menu (which is omitted if no such pages are provided) in the order
@@ -182,6 +201,9 @@ window.Lurch = {
      *  - `options.myCourse` can be a hierarchical structure that will be used
      *    to populate the contents of the "My course" file system.  See the
      *    documentation of the {@link MyCourseFileSystem} class for details.
+     *  - `options.documentStylesheets` can be an array of URLs that will be
+     *    appended to the TinyMCE editor's list of stylesheets for the document
+     *    (named `content_css` in TinyMCE).
      * 
      * The `options` object is stored as an `appOptions` member in the TinyMCE
      * editor instance once it is created, so that any part of the app can refer
@@ -307,7 +329,8 @@ window.Lurch = {
                 content_css : [
                     'document',
                     `${options.appRoot}/syntax-theme.css`,
-                    MathLiveCSS
+                    MathLiveCSS,
+                    ...( options.documentStylesheets || [ ] )
                 ],
                 visual_table_class : 'lurch-borderless-table',
                 height : "100%",
@@ -321,6 +344,13 @@ window.Lurch = {
                 link_context_toolbar: true,
                 statusbar : false,
                 setup : editor => {
+                    // Override the menu item and toolbar creation functions
+                    // with my own copy, which allows for name customization
+                    const origAddMenuItem = editor.ui.registry.addMenuItem
+                    editor.ui.registry.addMenuItem = ( name, item ) =>
+                        origAddMenuItem( name,
+                            Object.assign( item, options.menuItems?.[name] || { } ) )
+
                     // Save the options object for any part of the app to reference:
                     editor.appOptions = options
 

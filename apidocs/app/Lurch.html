@@ -181,6 +181,20 @@ resolve call will be passed the new TinyMCE editor instance.</p>
 <ul>
 <li><code>options.menuData</code> will be used to override default menus.  The format
 is the same as it is for <a href="https://www.tiny.cloud/docs/tinymce/latest/menus-configuration-options/#menu">TinyMCE menu specifications</a>.</li>
+<li><code>options.menuItems</code> will be used to override the attributes of the
+menu items that Lurch adds to TinyMCE.  (This does not apply to
+built-in TinyMCE menu items, like headings and undo and so forth, only
+to Lurch menu items like inserting math or environments, showing
+feedback, etc.)  The format is a mapping from internal menu item names
+(e.g., <code>&quot;expositorymath&quot;</code>) to an object containing attributes to
+override.  For example, to change the text of the <code>&quot;expositorymath&quot;</code>
+menu item from &quot;Expository math&quot; to &quot;LaTeX&quot;, use the code
+<code>&quot;menuItems&quot;: { &quot;expositorymath&quot;: { text: &quot;LaTeX&quot; } }</code>.  All other
+menu item attributes are also available, including <code>&quot;text&quot;</code>, <code>&quot;icon&quot;</code>,
+<code>&quot;shortcut&quot;</code>, and <code>&quot;tooltip&quot;</code>.  Even the menu item's action can be
+overridden in this way by specifying <code>&quot;onAction&quot;: myFunction</code>, except
+when loading these options from a configuration file in JSON format,
+because that format does not support functions.</li>
 <li><code>options.toolbarData</code> will be used to override default toolbars.  The
 format is the same as it is for <a href="https://www.tiny.cloud/docs/tinymce/latest/toolbar-configuration-options/#toolbar">TinyMCE toolbar specifications</a>.</li>
 <li><code>options.editor</code> will be used to override anything passed to TinyMCE's
@@ -200,13 +214,18 @@ site, where users typically are not creating documents they care to
 save).</li>
 <li><code>options.fileOpenTabs</code> can be used to reorder or subset the list of
 tabs in the File &gt; Open dialog box, which defaults to
-<code>[ 'From in-browser storage', 'From your computer', 'From the web', 'From Dropbox' ]</code>.</li>
+<code>[ 'From in-browser storage', 'From your computer', 'From the web', 'From Dropbox', 'From my course' ]</code>.  Each of these corresponds to a
+subclass of the <a href="FileSystem.html">FileSystem</a> class, and those are (respectively)
+<a href="BrowserFileSystem.html">BrowserFileSystem</a>, <a href="OfflineFileSystem.html">OfflineFileSystem</a>,
+<a href="WebFileSystem.html">WebFileSystem</a>, and <a href="MyCourseFileSystem.html">MyCourseFileSystem</a>.</li>
 <li><code>options.fileSaveTabs</code> can be used to reorder or subset the list of
 tabs in the File &gt; Save dialog box, which defaults to
-<code>[ 'To in-browser storage', 'To your computer', 'To Dropbox' ]</code>.</li>
+<code>[ 'To in-browser storage', 'To your computer', 'To Dropbox' ]</code>.  See
+above for documentation on the relevant <a href="FileSystem.html">FileSystem</a> subclasses.</li>
 <li><code>options.fileDeleteTabs</code> can be used to reorder or subset the list of
 tabs in the File &gt; Delete dialog box, which defaults to
-<code>[ 'In in-browser storage', 'In Dropbox' ]</code>.</li>
+<code>[ 'In in-browser storage', 'In Dropbox' ]</code>.  See above for
+documentation on the relevant <a href="FileSystem.html">FileSystem</a> subclasses.</li>
 <li><code>options.helpPages</code> can be an array of objects of the form
 <code>{ title : '...', url : '...' }</code>.  These will be displayed in the help
 menu (which is omitted if no such pages are provided) in the order
@@ -245,6 +264,9 @@ in the <a href="LurchDocument.html">LurchDocument</a> class.</li>
 <li><code>options.myCourse</code> can be a hierarchical structure that will be used
 to populate the contents of the &quot;My course&quot; file system.  See the
 documentation of the <a href="MyCourseFileSystem.html">MyCourseFileSystem</a> class for details.</li>
+<li><code>options.documentStylesheets</code> can be an array of URLs that will be
+appended to the TinyMCE editor's list of stylesheets for the document
+(named <code>content_css</code> in TinyMCE).</li>
 </ul>
 <p>The <code>options</code> object is stored as an <code>appOptions</code> member in the TinyMCE
 editor instance once it is created, so that any part of the app can refer
@@ -406,7 +428,7 @@ back to these options later.</p>
     <h4 class="method-heading">Source</h4>
     <ul>
         <li class="method-source">
-            <a href="editor.js.html">editor.js</a><a href="editor.js.html#source.148">, line 148</a>
+            <a href="editor.js.html">editor.js</a><a href="editor.js.html#source.170">, line 170</a>
         </li>
     </ul>
 
