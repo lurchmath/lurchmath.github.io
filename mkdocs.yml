@@ -4,14 +4,12 @@ site_name: The Lurch Project
 site_url: https://lurchmath.github.io/
 repo_url: https://github.com/lurchmath/lurchmath.github.io
 
-site_description: Documentation for the Lurch proof checker
+site_description: Website for the Lurch proof checker
 site_author: Nathan Carter and Ken Monks
 
 nav:
   - Home: index.md
   - About: about.md
-  - Tutorial: tutorial-toc.md
-  - Use Lurch now: https://lurchmath.github.io/lurch/app/
 
 theme:
   name: minty
