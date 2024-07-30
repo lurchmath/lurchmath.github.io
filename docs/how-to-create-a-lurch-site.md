@@ -10,7 +10,8 @@ To create your own Lurch site, follow the instructions below.
 
 ## Step 1. Fork an existing Lurch Site
 
-To find a site you want to fork, see our [gallery](lurch-sites-gallery.md).
+To find a site you want to use as the starting point for your new site, see our
+[gallery](lurch-sites-gallery.md).
 
 Once you have selected a site, visit its GitHub repository; you can find a link
 to that repository in the gallery.  For example, the Developer Site's repository
