@@ -58,4 +58,17 @@ still small, but growing.
     [homepage](http://lurchmath.github.io/example-lurch-site) shows how to
     customize some of its contents to suit your needs.
 
+!!! note "Intro Lurch Tutorial"
+    <div style="column-count: 3"><div>
+        [<i class="fa-solid fa-check"></i> Open app](http://lurchmath.github.io/intro-tutorial/app)
+    </div><div>
+        [<i class="fa-brands fa-github"></i> Open repo](http://github.com/lurchmath/intro-tutorial)
+    </div><div>
+        [<i class="fa-solid fa-globe"></i> Open homepage](http://lurchmath.github.io/intro-tutorial)
+    </div></div>
+
+    A Lurch Site doesn't need to be for a course. This one contains documents
+    that walk new users through getting to know Lurch, and serves as a tutorial
+    for the software. [Check it out to learn how Lurch works!](http://lurchmath.github.io/intro-tutorial)
+
 More coming soon!

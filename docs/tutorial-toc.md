@@ -6,29 +6,19 @@ The tutorial series below is for the Lurch application that is
 
 !!! warning
 
-    This tutorial series covers only a portion of what Lurch can do.
+    The tutorials we have created so far cover only a portion
+    of what Lurch can do. We are actively working on both the
+    tutorials and the software, but the software has far more
+    capabilities than the tutorials below cover. Check back soon!
 
-    We are actively developing it still.
+## Lurch Intro Tutorial
 
-    What you see below are the tutorials written so far.
+This tutorial is designed for any curious instructor who is
+considering using Lurch for a course (or a student in such a
+course who wants to know all the details of how Lurch works).
 
-## Basics
+[Visit the tutorial website here.](https://lurchmath.github.io/intro-tutorial)
 
- - [Lurch as a word processor](tut-01-word-processor.md)
- - [Adding some mathematics](tut-02-expository-math.md)
- - [Making mathematics meaningful](tut-03-meaningful-math.md)
- - [Checking your reasoning](tut-04-validation.md)
+## More to come
 
-## The main ingredients
-
- - [Making assumptions](tut-05-assumptions.md)
- - [Creating and using environments](tut-06-environments.md)
- - [Reading and using rules](tut-07-rules.md)
- - [Hiding and showing rules](tut-08-document-header.md)
-
-## Your first proofs
-
- - [Part 1: Propositional logic](tut-09a-real-math.md)
- - [Part 2: Constructing a proof](tut-09b-real-math.md) (not yet written---coming soon!)
- - [Part 3: Subproofs exercise](tut-09c-real-math.md) (not yet written---coming soon!)
- - [Part 4: Subproofs solution](tut-09d-real-math.md) (not yet written---coming soon!)
+More tutorials will be added here with time.
