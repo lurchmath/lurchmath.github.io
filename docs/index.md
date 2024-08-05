@@ -16,15 +16,20 @@ We have recently overhauled our documentation, and more updates are coming soon.
 Not all docs have been updated, but most have been.  New bug fixes, new
 features, and new documentation arrive regularly.
 
-<div class="card-row-3" markdown="1">
+<div class="card-row-2" markdown="1">
 <div markdown="1">
 [Tutorials](tutorial-toc.md)
 </div>
 <div markdown="1">
 [How-To Guides](how-to-toc.md)
 </div>
+</div>
+<div class="card-row-2" markdown="1">
 <div markdown="1">
 [References](reference-toc.md)
+</div>
+<div markdown="1">
+[Gallery](lurch-sites-gallery.md)
 </div>
 </div>
 
